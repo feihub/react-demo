@@ -15,13 +15,33 @@
         <!-- 注意: 部署时，将 "development.js" 替换为 "production.min.js"。-->
         <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     </head>
     <body>
 
-        <h1>网站中添加React演示</h1>
+        <h1>babel快速使用JSX演示</h1>
         <div id="like_button_container"></div>
         <!-- 加载我们的 React 组件。-->
-        <script src="like_button.js"></script>
+        <script type="text/babel">
+        
+            class LikeButton extends React.Component{
+                constructor(){
+                    super();
+                    this.state = {liked:false};
+                }
+
+                render(){
+                    return <button  className="btn btn-primary" onClick={() => this.setState(this.state.liked?{ liked: false }:{ liked: true })}>
+                        {this.state.liked?"true":"false"}
+                        </button>;
+                }
+            }
+
+            const domContainer = document.querySelector('#like_button_container');
+            ReactDOM.render(<LikeButton/>, domContainer);
+        
+        </script>
 
     </body>
 </html>
