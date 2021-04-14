@@ -1,9 +1,7 @@
-# react-demo
-
 | Demo Name | Content |
 | -------- | :------ |
 | demo1	| 网站中添加 React |
-| demo2	| React 应用/Hello World/JSX/元素渲染 |
+| demo2	| 创建React 应用/Hello World/JSX/元素渲染 |
 | demo3	| 组件&Props |
 | demo4	| State & 生命周期 |
 | demo5	| 事件处理 |
