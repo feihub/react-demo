@@ -6,15 +6,15 @@
 
 const e = React.createElement;
 
-class LikeButton extends React.Component{
+class LikeButton extends React.Component {
 
-    constructor(){
+    constructor() {
         super();
-        this.state = {liked:false};
+        this.state = { liked: false };
     }
 
-    render(){
-        return e('button',{ className:"btn btn-primary", onClick: () => this.setState(this.state.liked?{ liked: false }:{ liked: true })},this.state.liked?"true":"false");
+    render() {
+        return e('button', { className: "btn btn-primary", onClick: () => this.setState(this.state.liked ? { liked: false } : { liked: true }) }, this.state.liked ? "true" : "false");
     }
 }
 
