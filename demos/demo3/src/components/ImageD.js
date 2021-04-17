@@ -3,9 +3,6 @@ import React from "react";
 export default class ImageD extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
-    const { src, alt, width, height } = this.props.imgInfo;
-    this.alt = alt;
   }
 
   render() {
@@ -13,12 +10,13 @@ export default class ImageD extends React.Component {
       <div>
         <img
           src={this.props.imgInfo.src}
-          alt={this.alt}
+          alt={this.props.imgInfo.alt}
           style={{
             width: this.props.imgInfo.width + "vw",
             height: this.props.imgInfo.height + "vh"
           }}
         ></img>
+        <p>{this.props.imgInfo.alt}</p>
       </div>
     );
   }
