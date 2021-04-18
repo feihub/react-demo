@@ -4,6 +4,7 @@ import './i18n'
 // the hook
 import { useTranslation } from 'react-i18next';
 import { Layout, Menu, Breadcrumb } from 'antd';
+import { Counter } from './features/counter/Counter';
 
 const { Header, Content, Footer } = Layout;
 
@@ -28,7 +29,7 @@ function App() {
             <Breadcrumb.Item>{t('List')}</Breadcrumb.Item>
             <Breadcrumb.Item>{t('App')}</Breadcrumb.Item>
           </Breadcrumb>
-          <div className="site-layout-content">{t('Content')}</div>
+          <div className="site-layout-content">{t('Content')}<Counter/></div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>{t('Ant Design ©2018 Created by Ant UED')}</Footer>
       </Layout>
