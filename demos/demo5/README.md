@@ -8,6 +8,6 @@
 | 首先： npm install -g create-react-app |
 | 然后建一个自定义文件夹：cmd 执行命令:  create-react-ap  projectName |
 
-# 事件处理
+# 事件处理 & 参数传递
 
 # test
