@@ -11,8 +11,32 @@ function App() {
 
   const { t, i18n } = useTranslation();
 
-  const menu = (
-    <Menu onClick={(e) => handleMenuClick(e)}>
+      const menu = (
+        <Menu onClick={(e) => handleMenuClick(e)}>
+          <Menu.Item key="1">
+            {t('Daytime')}
+          </Menu.Item>
+          <Menu.Item key="2">
+            {t('Night')}
+          </Menu.Item>
+        </Menu>
+      );
+  
+    function handleMenuClick(e: MenuInfo) {
+    if (e.key == '1') {
+      window.less.modifyVars({
+        '@primary-color': '#0035ff'
+      })
+    } else {
+      window.less.modifyVars({
+        '@primary-color': '#0035ff'
+      })
+    }
+
+  }
+  
+  const menu2 = (
+    <Menu onClick={(e) => handleMenuClick2(e)}>
       <Menu.Item key="1">
         English
       </Menu.Item>
@@ -22,7 +46,7 @@ function App() {
     </Menu>
   );
 
-  function handleMenuClick(e: MenuInfo) {
+  function handleMenuClick2(e: MenuInfo) {
     if (e.key == '1') {
       i18n.changeLanguage('en');
     } else {
@@ -41,6 +65,11 @@ function App() {
             <Menu.Item key="2">{t('nav2')}</Menu.Item>
             <Menu.Item key="3">{t('nav3')}</Menu.Item>
             <Dropdown overlay={menu}>
+                <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                  {t('Theme')} <DownOutlined />
+                </a>
+            </Dropdown>
+            <Dropdown overlay={menu2}>
                 <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
                   {t('Language')} <DownOutlined />
                 </a>
