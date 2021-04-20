@@ -1,4 +1,3 @@
-import './App.css';
 import './i18n'
 // the hook
 import { useTranslation } from 'react-i18next';
