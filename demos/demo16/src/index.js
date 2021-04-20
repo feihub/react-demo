@@ -8,6 +8,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
+   {/* 2.配置redux store给React使用 */}
     <Provider store={store}>
       <App />
     </Provider>
