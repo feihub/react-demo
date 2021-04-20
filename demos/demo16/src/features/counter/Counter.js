@@ -11,7 +11,9 @@ import {
 import styles from './Counter.module.css';
 
 export function Counter() {
+  //7.useSelector从store读取数据
   const count = useSelector(selectCount);
+  //8.useDispatch触发动作
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
 
@@ -51,6 +53,7 @@ export function Counter() {
         </button>
         <button
           className={styles.asyncButton}
+          //B.3 用dispatch调用redux thunk
           onClick={() => dispatch(incrementAsync(incrementValue))}
         >
           Add Async
