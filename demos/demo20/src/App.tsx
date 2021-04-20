@@ -1,9 +1,9 @@
-import React from 'react';
-import './App.css';
 import './i18n'
 // the hook
 import { useTranslation } from 'react-i18next';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu, Breadcrumb, Dropdown } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+import { MenuInfo } from 'rc-menu/lib/interface';
 
 const { Header, Content, Footer } = Layout;
 
@@ -11,15 +11,69 @@ function App() {
 
   const { t, i18n } = useTranslation();
 
+      const menu = (
+        <Menu onClick={(e) => handleMenuClick(e)}>
+          <Menu.Item key="1">
+            {t('Daytime')}
+          </Menu.Item>
+          <Menu.Item key="2">
+            {t('Night')}
+          </Menu.Item>
+        </Menu>
+      );
+  
+    function handleMenuClick(e: MenuInfo) {
+    if (e.key == '1') {
+      window.less.modifyVars({
+        '@primary-color': '#1890ff'
+      })
+    } else {
+      window.less.modifyVars({
+        '@primary-color': '#0035ff'
+      })
+    }
+
+  }
+  
+  const menu2 = (
+    <Menu onClick={(e) => handleMenuClick2(e)}>
+      <Menu.Item key="1">
+        English
+      </Menu.Item>
+      <Menu.Item key="2">
+        中文
+      </Menu.Item>
+    </Menu>
+  );
+
+  function handleMenuClick2(e: MenuInfo) {
+    if (e.key == '1') {
+      i18n.changeLanguage('en');
+    } else {
+      i18n.changeLanguage('zh');
+    }
+
+  }
+
   return (
     <div className="App">
       <Layout className="layout">
         <Header>
           <div className="logo" />
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
             <Menu.Item key="1">{t('nav1')}</Menu.Item>
             <Menu.Item key="2">{t('nav2')}</Menu.Item>
             <Menu.Item key="3">{t('nav3')}</Menu.Item>
+            <Dropdown overlay={menu}>
+                <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                  {t('Theme')} <DownOutlined />
+                </a>
+            </Dropdown>
+            <Dropdown overlay={menu2}>
+                <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                  {t('Language')} <DownOutlined />
+                </a>
+            </Dropdown>
           </Menu>
         </Header>
         <Content style={{ padding: '0 50px' }}>

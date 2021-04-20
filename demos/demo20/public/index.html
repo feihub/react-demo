@@ -27,6 +27,14 @@
     <title>React Redux App</title>
   </head>
   <body>
+    <link rel="stylesheet/less" type="text/css" href="%PUBLIC_URL%/theme.less" />
+    <script>
+      window.less = {
+        async: true,
+        env: 'production'
+      };
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/less@3.13"></script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

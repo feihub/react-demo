@@ -1,10 +1,14 @@
 {
+    "Language":"Language",
     "nav1":"nav1",
     "nav2":"nav2",
     "nav3":"nav3",
     "Home":"Home",
     "List":"List",
     "App":"App",
+    "Daytime":"Daytime",
+    "Night":"Night",
+    "Theme":"Theme",
     "Content":"Content",
     "Ant Design ©2018 Created by Ant UED":"Ant Design ©2018 Created by Ant UED"
 }
