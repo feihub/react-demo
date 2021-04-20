@@ -1,25 +1,35 @@
+import React from 'react';
+import './i18n'
+import { useTranslation } from 'react-i18next';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  
+  constructor(props) {
+        super(props);
+        this.change = this.change.bind(this);
+        this.isEnglish = true;
+    }
+  
+   const { t, i18n } = useTranslation();
+
+    change() {
+      if(this.isEnglish){
+          this.isEnglish=false;
+         i18n.changeLanguage('en');
+      }else{
+         i18n.changeLanguage('zh');
+      }
+    }
+
+  render() {
+    return (
+      <div className="App">
+        <button onClick={this.change}>{t('Language')}<button/>
+      </div>
+    );
+  }
 }
 
 export default App;
