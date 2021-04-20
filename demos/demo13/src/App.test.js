@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-//https://jestjs.io/docs/getting-started
+//https://jestjs.io/zh-Hans/docs/getting-started
 
 test('renders learn react link', () => {
   render(<App />);
