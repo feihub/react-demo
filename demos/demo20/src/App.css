@@ -1,6 +1,6 @@
 @import '~antd/dist/antd.css';
 
-div.logo {
+.logo {
     float: left;
     width: 31px;
     height: 31px;

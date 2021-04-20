@@ -48,7 +48,6 @@ function Blog(props) {
   return (
     <div>
       {sidebar}
-      <hr />
       {content}
     </div>
   );
@@ -108,10 +107,15 @@ function NumberList4(props) {
 function App() {
   return (
     <div className="App">
+      <hr />
       <NumberList numbers={numbers} />
+      <hr />
       <NumberList2 numbers={numbers} />
+      <hr />
       <NumberList3 numbers={numbers} />
+      <hr />
       <NumberList4 numbers={numbers} />
+      <hr />
       <Blog posts={posts} />
     </div>
   );

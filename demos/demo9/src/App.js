@@ -9,6 +9,11 @@ function BoilingVerdict(props) {
   return <p>The water would not boil.</p>;
 }
 
+const scaleNames = {
+  c: 'Celsius',
+  f: 'Fahrenheit'
+};
+
 class TemperatureInput extends React.Component {
   constructor(props) {
     super(props);
