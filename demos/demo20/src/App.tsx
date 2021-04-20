@@ -25,7 +25,7 @@ function App() {
     function handleMenuClick(e: MenuInfo) {
     if (e.key == '1') {
       window.less.modifyVars({
-        '@primary-color': '#0035ff'
+        '@primary-color': '#1890ff'
       })
     } else {
       window.less.modifyVars({
