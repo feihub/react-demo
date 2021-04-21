@@ -9,7 +9,7 @@ import './App.css';
 //------------------------------------------------------------
 function ListItem(props) {
   // 正確！你不需要在這裡指出 key：
-  return <li>{props.value}</li>;
+  return <li className="row alert alert-info ">{props.value}</li>;
 }
 
 function NumberList(props) {
@@ -33,7 +33,7 @@ function Blog(props) {
   const sidebar = (
     <ul>
       {props.posts.map((post) =>
-        <li key={post.id}>
+        <li className="row alert alert-info " key={post.id}>
           {post.title}
         </li>
       )}
@@ -41,8 +41,8 @@ function Blog(props) {
   );
   const content = props.posts.map((post) =>
     <div key={post.id}>
-      <h3>{post.title}</h3>
-      <p>{post.content}</p>
+      <h3 className="row alert alert-info ">{post.title}</h3>
+      <p className="row alert alert-info ">{post.content}</p>
     </div>
   );
   return (
@@ -106,7 +106,7 @@ function NumberList4(props) {
 
 function App() {
   return (
-    <div className="App">
+    <div className="Container">
       <hr />
       <NumberList numbers={numbers} />
       <hr />

@@ -1,14 +1,9 @@
 {
-    "Language":"语言",
-    "nav1":"导航1",
-    "nav2":"导航2",
-    "nav3":"导航3",
     "Home":"首页",
-    "List":"列表",
-    "App":"应用",
-    "Daytime":"白天",
-    "Night":"夜晚",
+    "Language":"语言",
+    "Counter":"记数",
     "Theme":"主题",
-    "Content":"内容",
+    "light":"白灰色",
+    "Info":"绿色",
     "Ant Design ©2018 Created by Ant UED":"Ant Design ©2018 Created by Ant UED"
 }

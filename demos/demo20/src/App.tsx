@@ -1,77 +1,71 @@
-import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './i18n'
 // the hook
 import { useTranslation } from 'react-i18next';
-import { Layout, Menu, Breadcrumb, Dropdown } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
-import { MenuInfo } from 'rc-menu/lib/interface';
 import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Counter } from './features/counter/Counter';
 import { Home } from './features/home/home';
-
-const { Header, Content, Footer } = Layout;
+import { Container, Navbar, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
+import { useState } from 'react';
 
 function App() {
 
   const { t, i18n } = useTranslation();
+  const [theme, setTheme] = useState<string>('light');
 
-  const menu2 = (
-    <Menu onClick={(e) => handleMenuClick2(e)}>
-      <Menu.Item key="1">
-        English
-      </Menu.Item>
-      <Menu.Item key="2">
-        中文
-      </Menu.Item>
-    </Menu>
-  );
+  const changeTheme = (eventKey: string | null, e: React.SyntheticEvent<unknown>): void => {
+    if (eventKey === '1') {
+      setTheme('light');
+    } else if (eventKey === '2') {
+      setTheme('info');
+    }
+  };
 
-  function handleMenuClick2(e: MenuInfo) {
-    if (e.key === '1') {
+  const changeLanguage = (eventKey: string | null, e: React.SyntheticEvent<unknown>): void => {
+    if (eventKey === '1') {
       i18n.changeLanguage('en');
-    } else {
+    } else if (eventKey === '2') {
       i18n.changeLanguage('zh');
     }
-
-  }
+  };
 
   return (
-    <div className="App">
+    <Container >
       <Router>
-        <Layout className="layout">
-          <Header>
-            <div className='logo' />
-            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-              <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
-              <Menu.Item key="2"><Link to="/clock">clock</Link></Menu.Item>
-              <Menu.Item key="3">
-                <Dropdown overlay={menu2}>
-                  <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                    {t('Language')} <DownOutlined />
-                  </a>
-                </Dropdown>
-              </Menu.Item>
-            </Menu>
-          </Header>
-          <Content style={{ padding: '0 50px' }}>
-            <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>{t('Home')}</Breadcrumb.Item>
-              <Breadcrumb.Item>{t('List')}</Breadcrumb.Item>
-              <Breadcrumb.Item>{t('App')}</Breadcrumb.Item>
-            </Breadcrumb>
-          </Content>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/clock">
-              <Counter />
-            </Route>
-          </Switch>
-          <Footer style={{ textAlign: 'center' }}>{t('Ant Design ©2018 Created by Ant UED')}</Footer>
-        </Layout>
+        <Navbar bg={theme}>
+          <Navbar.Brand href="#/">React-Demo</Navbar.Brand>
+          <Navbar.Toggle />
+          <Navbar.Collapse>
+            <Nav>
+              <Nav.Link href="#/">{t('Home')}</Nav.Link>
+              <Nav.Link href="#/clock">{t('Counter')}</Nav.Link>
+            </Nav>
+            <Navbar.Collapse className="justify-content-center">
+              <Nav activeKey={theme === "light" ? "1" : "2"} onSelect={changeTheme}>
+                <NavDropdown title={t('Theme')} id="basic-nav-dropdown-Theme">
+                  <NavDropdown.Item eventKey="1">{t('light')}</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="2">{t('Info')}</NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+              <Nav activeKey={i18n.language === "en" ? "1" : "2"} onSelect={changeLanguage}>
+                <NavDropdown title={t('Language')} id="basic-nav-dropdown-Language">
+                  <NavDropdown.Item eventKey="1">English</NavDropdown.Item>
+                  <NavDropdown.Item eventKey="2">中文</NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar.Collapse>
+        </Navbar >
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/clock">
+            <Counter />
+          </Route>
+        </Switch>
       </Router>
-    </div>
+    </Container>
   );
 }
 

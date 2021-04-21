@@ -1,5 +1,10 @@
-import styles from './Home.module.css';
+import { Alert } from 'react-bootstrap';
+// the hook
+import { useTranslation } from 'react-i18next';
 
 export function Home() {
-    return (<div className={styles.home}>Home</div>);
+
+    const { t, i18n } = useTranslation();
+
+    return <Alert>{t('Home')}</Alert>;
 }
