@@ -16,7 +16,7 @@ function NumberList(props) {
   const numbers = props.numbers;
   const listItems = numbers.map((number) =>
     // 正確！Key 應該在 array 內被指定。
-    <ListItem key={number.toString()} value={number} />
+    <ListItem key={number.toString()} value={'NumberList------'+number} />
   );
   return (
     <ul>
@@ -34,15 +34,15 @@ function Blog(props) {
     <ul>
       {props.posts.map((post) =>
         <li className="row alert alert-info " key={post.id}>
-          {post.title}
+          {'Blog---sidebar--title-'+post.title}
         </li>
       )}
     </ul>
   );
   const content = props.posts.map((post) =>
     <div key={post.id}>
-      <h3 className="row alert alert-info ">{post.title}</h3>
-      <p className="row alert alert-info ">{post.content}</p>
+      <h3 className="row alert alert-info ">{'Blog---content--title-'+post.title}</h3>
+      <p className="row alert alert-info ">{'Blog---content--content-'+post.content}</p>
     </div>
   );
   return (
@@ -64,7 +64,7 @@ function NumberList2(props) {
   const numbers = props.numbers;
   const listItems = numbers.map((number) =>
     <ListItem key={number.toString()}
-              value={number} />
+              value={'NumberList2------'+number} />
   );
   return (
     <ul>
@@ -81,7 +81,7 @@ function NumberList3(props) {
     <ul>
       {numbers.map((number) =>
         <ListItem key={number.toString()}
-                  value={number} />
+                  value={'NumberList3------'+number} />
       )}
     </ul>
   );
@@ -96,7 +96,7 @@ function NumberList4(props) {
     <ul>
       {numbers.map((number, index) =>
         <ListItem key={index}
-                  value={number} />
+                  value={'NumberList4------'+number} />
       )}
     </ul>
   );
@@ -106,7 +106,7 @@ function NumberList4(props) {
 
 function App() {
   return (
-    <div className="Container">
+    <div className="container">
       <hr />
       <NumberList numbers={numbers} />
       <hr />
