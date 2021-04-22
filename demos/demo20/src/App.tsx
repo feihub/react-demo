@@ -32,8 +32,8 @@ function App() {
     <Router>
       <Navbar bg={theme}>
         <Navbar.Brand href="#/">React-Demo</Navbar.Brand>
-        <Nav>
-            <Nav.Item><Nav.Link href="#/">{t('Home')}</Nav.Link></Nav.Item>
+        <Nav defaultActiveKey="#/home">
+            <Nav.Item><Nav.Link href="#/home">{t('Home')}</Nav.Link></Nav.Item>
             <Nav.Item><Nav.Link href="#/clock">{t('Counter')}</Nav.Link></Nav.Item>
             <Nav.Item className="ms-auto"><Nav activeKey={theme === "light" ? "1" : "2"} onSelect={changeTheme}>
                 <NavDropdown title={t('Theme')} id="basic-nav-dropdown-Theme">
@@ -51,7 +51,7 @@ function App() {
           </Nav>
       </Navbar >
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/home">
           <Home />
         </Route>
         <Route path="/clock">
