@@ -13,17 +13,29 @@ return (
 
 <main>
 
-            <Alert id='item_1'>this is item_1 </Alert>
+            <Alert id='item_1'>
+                
+                this is item_1 -----{t('Component')}
+                
+            </Alert>
 
             <Alert id='item_2'>
                 
-                this is item_2 
+                this is item_2 -----{t('State')}
 
-                <Alert id='item_2_1'>this is item_2_1 </Alert>
+                <Alert id='item_2_1'>
+                    
+                    this is item_2_1 -----{t('seState')} 
+                
+                </Alert>
 
             </Alert>
 
-            <Alert id='item2_1'>this is item2_1 </Alert>
+            <Alert id='item2_1'>
+                
+                this is item2_1 -----{t('Example1')} 
+                
+            </Alert>
 
         </main>
 );
