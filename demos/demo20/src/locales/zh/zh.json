@@ -5,5 +5,15 @@
     "Theme":"主题",
     "light":"白灰色",
     "Info":"绿色",
-    "Ant Design ©2018 Created by Ant UED":"Ant Design ©2018 Created by Ant UED"
+    "Login":"登录",
+    "User Info":"用户信息",
+    "Logout":"退出",
+    "Submit":"提交",
+    "Password":"密码",
+    "We'll never share your info with anyone else.":"我们不会向任何人泄露个人信息。",
+    "Enter name":"输入用户名",
+    "Name":"用户名",
+    "Add Amount":"增加金额",
+    "Add Async":"异步增加",
+    "Add If Odd":"如果奇数增加"
 }
