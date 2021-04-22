@@ -13,9 +13,9 @@ function Top() {
 
   const changeTheme = (eventKey: string | null, e: React.SyntheticEvent<unknown>): void => {
     if (eventKey === '1') {
-      dispatch(changeThemeLight());
+      dispatch(changeTheme('light'));
     } else if (eventKey === '2') {
-       dispatch(changeThemeInfo());
+       dispatch(changeTheme('info'));
     }
   };
 
