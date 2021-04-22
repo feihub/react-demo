@@ -14,18 +14,18 @@ return (
 <Switch>
                 <Route exact path="/home/item">
                     <ListGroup as="ul" defaultActiveKey="#item_1">
-                        <ListGroup.Item as="li"><Nav.Link href="#item_1">Cras justo odio</Nav.Link></ListGroup.Item>
+                        <ListGroup.Item as="li"><Nav.Link href="#item_1">{t('Component')}</Nav.Link></ListGroup.Item>
                         <ListGroup.Item as="li">
-                            <Nav.Link href="#item_2">Morbi leo risus</Nav.Link>
+                            <Nav.Link href="#item_2">{t('State')}</Nav.Link>
                             <ListGroup as="ul">
-                                <ListGroup.Item as="li"><Nav.Link href="#item_2_1">Cras justo odio</Nav.Link></ListGroup.Item>
+                                <ListGroup.Item as="li"><Nav.Link href="#item_2_1">{t('seState')}</Nav.Link></ListGroup.Item>
                               </ListGroup>
                             </ListGroup.Item>
                       </ListGroup>
                 </Route>
                 <Route path="/home/item2">
                     <ListGroup as="ul" defaultActiveKey="#item2_1">
-                        <ListGroup.Item as="li"><Nav.Link href="#item2_1">Cras justo odio</Nav.Link></ListGroup.Item>
+                        <ListGroup.Item as="li"><Nav.Link href="#item2_1">{t('Example1')}</Nav.Link></ListGroup.Item>
                 </Route>
               </Switch>
 
