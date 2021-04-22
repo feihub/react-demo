@@ -8,7 +8,7 @@ import {
 import {
   selectLogin,
 } from './loginSlice';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Container, Row } from 'react-bootstrap';
 
 export function ShowFrom() {
 
@@ -19,17 +19,19 @@ export function ShowFrom() {
   const dispatch = useAppDispatch();
 
   return (
-
-    <Form>
-      <Form.Group controlId="formBasicName">
-        <Form.Label>{t('Name')}</Form.Label>
-        <Form.Control type="name" plaintext readOnly />
-        <Form.Text className="text-muted">
-          {t('We\'ll never share your email with anyone else')}.
+    <Container fluid>
+      <Row className="justify-content-center">
+        <Form className="mt-5">
+          <Form.Group controlId="formBasicName">
+            <Form.Label>{t('Name')}</Form.Label>
+            <Form.Control type="name" readOnly value='Test User' />
+            <Form.Text className="text-muted">
+              {t('We\'ll never share your email with anyone else')}.
           </Form.Text>
-      </Form.Group>
-
-    </Form>
+          </Form.Group>
+        </Form>
+      </Row>
+    </Container>
 
   );
 

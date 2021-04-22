@@ -8,7 +8,7 @@ import {
 import {
   selectLogin,
 } from '../login/loginSlice';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { NavLogin } from '../navlogin/NavLogin';
 
 
@@ -39,12 +39,12 @@ export function Top() {
 
   return (
 
-    <Navbar bg={theme}>
-      <Navbar.Brand href="#/">React-Demo</Navbar.Brand>
-      <Nav defaultActiveKey="#/home">
+    <Navbar bg={theme} className="pr-5 pl-5">
+      <Navbar.Brand >React-Demo</Navbar.Brand>
+      <Nav className="flex-grow-1" defaultActiveKey="#/home">
         <Nav.Item><Nav.Link href="#/home">{t('Home')}</Nav.Link></Nav.Item>
         <Nav.Item><Nav.Link href="#/clock">{t('Counter')}</Nav.Link></Nav.Item>
-        <Nav.Item className="ms-auto"><Nav activeKey={theme === "light" ? "1" : "2"} onSelect={changeThemeNow}>
+        <Nav.Item className="ml-auto"><Nav activeKey={theme === "light" ? "1" : "2"} onSelect={changeThemeNow}>
           <NavDropdown title={t('Theme')} id="basic-nav-dropdown-Theme">
             <NavDropdown.Item eventKey="1">{t('light')}</NavDropdown.Item>
             <NavDropdown.Item eventKey="2">{t('Info')}</NavDropdown.Item>
@@ -56,7 +56,7 @@ export function Top() {
             <NavDropdown.Item eventKey="2">中文</NavDropdown.Item>
           </NavDropdown>
         </Nav></Nav.Item>
-        <Nav.Item className="me-5"><NavLogin /></Nav.Item>
+        <Nav.Item className="mr-5"><NavLogin /></Nav.Item>
       </Nav>
     </Navbar >
 

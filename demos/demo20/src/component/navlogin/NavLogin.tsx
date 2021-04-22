@@ -29,7 +29,7 @@ export function NavLogin() {
     return <Nav.Link as={Button} href="#/login">{t('Login')}</Nav.Link>;
   } else {
     return < Dropdown as={ButtonGroup}>
-      <Image src="holder.js/171x180" roundedCircle />
+      <Button>Test User</Button>
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
       <Dropdown.Menu onSelect={logoutNow} >
         <Dropdown.Item eventKey="1" href="#/show">{t('User Info')}</Dropdown.Item>
