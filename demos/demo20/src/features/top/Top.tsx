@@ -47,7 +47,7 @@ function Top() {
                   <NavDropdown.Item eventKey="2">中文</NavDropdown.Item>
                 </NavDropdown>
               </Nav></Nav.Item>
-            <Nav.Item className="me-5"><TopLogin /></Nav.Item>
+            <Nav.Item className="me-5"><NavLogin /></Nav.Item>
           </Nav>
       </Navbar >
 
