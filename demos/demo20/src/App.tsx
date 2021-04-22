@@ -24,7 +24,10 @@ function App() {
           <Counter />
         </Route>
         <Route path="/login">
-            <Login />
+            <LoginFrom />
+          </Route>
+        <Route path="/show">
+            <ShowFrom />
           </Route>
       </Switch>
     </Router>
