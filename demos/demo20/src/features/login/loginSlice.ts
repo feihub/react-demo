@@ -8,7 +8,7 @@ export interface LoginState {
 
 const initialState: LoginState = {
   isLogin: false,
-  username: null,
+  username: '',
 };
 
 //3.创建state slice用于生成action和reducer
@@ -27,6 +27,6 @@ export const loginSlice = createSlice({
 
 export const { login, logout } = loginSlice.actions;
 
-export const selectLogin = (state: RootState) => state.login.value;
+export const selectLogin = (state: RootState) => state.login.isLogin;
 
 export default loginSlice.reducer;

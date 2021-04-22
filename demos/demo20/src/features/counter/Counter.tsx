@@ -10,6 +10,10 @@ import {
   selectCount,
 } from './counterSlice';
 import styles from './Counter.module.css';
+import { useTranslation } from 'react-i18next';
+import {
+  selectTheme,
+} from '../theme/themeSlice';
 
 export function Counter() {
   //7.useAppSelector从store读取数据
@@ -19,11 +23,10 @@ export function Counter() {
   const [incrementAmount, setIncrementAmount] = useState('2');
 
   const incrementValue = Number(incrementAmount) || 0;
-  
-    const { t, i18n } = useTranslation();
-  
+
+  const { t, i18n } = useTranslation();
+
   const theme = useAppSelector(selectTheme);
-  const dispatch = useAppDispatch();
 
   return (
     <div>

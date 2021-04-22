@@ -9,7 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
     {/* 2.配置redux store给React使用 */}
     <Provider store={store}>
-        <App />
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

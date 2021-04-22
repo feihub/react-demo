@@ -13,14 +13,14 @@ export const themeSlice = createSlice({
   name: 'theme',
   initialState,
   reducers: {
-    changeTheme: (state, action : string) => {
-      state.theme = action;
+    changeTheme: (state, payload: any) => {
+      state.theme = payload;
     }
   }
 });
 
 export const { changeTheme } = themeSlice.actions;
 
-export const selectTheme = (state: RootState) => state.theme.value;
+export const selectTheme = (state: RootState) => state.theme.theme;
 
 export default themeSlice.reducer;

@@ -1,30 +1,38 @@
 import { Alert } from 'react-bootstrap';
 // the hook
 import { useTranslation } from 'react-i18next';
+import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import {
+    selectTheme,
+} from '../theme/themeSlice';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Left } from './Left';
+import { Center } from './Center';
+import { Right } from './Right';
 
 export function Home() {
 
-const { t, i18n } = useTranslation();
-    
-const theme = useAppSelector(selectTheme);
-const dispatch = useAppDispatch();
+    const { t, i18n } = useTranslation();
 
-return (
+    const theme = useAppSelector(selectTheme);
+    const dispatch = useAppDispatch();
 
-<Container fluid>
-    <Row>
-        <Col sx={2}>
-            <Left/>
-        </Col>
+    return (
 
-        <Col sx={8}>
-            <Center/>
-        </Col>
+        <Container fluid>
+            <Row>
+                <Col xs={2}>
+                    <Left />
+                </Col>
 
-        <Col sx={2}>
-             <Right/>
-        </Col>
-    </Row>
-</Container>
-);
+                <Col xs={8}>
+                    <Center />
+                </Col>
+
+                <Col xs={2}>
+                    <Right />
+                </Col>
+            </Row>
+        </Container>
+    );
 }
