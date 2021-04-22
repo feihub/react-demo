@@ -10,14 +10,16 @@ import { useState } from 'react';
 function App() {
 
   const { t, i18n } = useTranslation();
-  const [theme, setTheme] = useState<string>('light');
-  const [login, setLogin] = useState<boolean>(false);
+  
+  const theme = useAppSelector(selectTheme);
+  const login = useAppSelector(selectLogin);
+  const dispatch = useAppDispatch();
 
   const changeTheme = (eventKey: string | null, e: React.SyntheticEvent<unknown>): void => {
     if (eventKey === '1') {
-      setTheme('light');
+      dispatch(changeThemeLight());
     } else if (eventKey === '2') {
-      setTheme('info');
+       dispatch(changeThemeInfo());
     }
   };
 
