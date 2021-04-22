@@ -9,8 +9,7 @@ const initialState: ThemeState = {
   theme: 'light'
 };
 
-//3.创建state slice用于生成action和reducer
-export const counterSlice = createSlice({
+export const themeSlice = createSlice({
   name: 'theme',
   initialState,
   reducers: {
@@ -25,6 +24,6 @@ export const counterSlice = createSlice({
 
 export const { changeThemeLight, changeThemeDark } = themeSlice.actions;
 
-export const selectTheme = (state: RootState) => state.theme.theme;
+export const selectTheme = (state: RootState) => state.theme.value;
 
 export default themeSlice.reducer;
