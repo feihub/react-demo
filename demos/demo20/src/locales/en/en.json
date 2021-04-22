@@ -5,5 +5,15 @@
     "Theme":"Theme",
     "light":"light",
     "Info":"Info",
-    "Ant Design ©2018 Created by Ant UED":"Ant Design ©2018 Created by Ant UED"
+    "Login":"Login",
+    "User Info":"User Info",
+    "Logout":"Logout",
+    "Submit":"Submit",
+    "Password":"Password",
+    "We'll never share your info with anyone else.":"We'll never share your info with anyone else.",
+    "Enter name":"Enter name",
+    "Name":"Name",
+    "Add Amount":"Add Amount",
+    "Add Async":"Add Async",
+    "Add If Odd":"Add If Odd"
 }
