@@ -12,7 +12,7 @@ const initialState: LoginState = {
 };
 
 //3.创建state slice用于生成action和reducer
-export const counterSlice = createSlice({
+export const loginSlice = createSlice({
   name: 'login',
   initialState,
   reducers: {
