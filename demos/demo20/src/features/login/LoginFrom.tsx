@@ -10,16 +10,15 @@ const login = useAppSelector(selectLogin);
 const theme = useAppSelector(selectTheme);
 const dispatch = useAppDispatch();
       
-        const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
 
-    setValidated(true);
-              
-              dispatch(login());
+     dispatch(login());
+    
   };
 
 return (
