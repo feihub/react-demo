@@ -7,7 +7,7 @@ export function Login() {
 const { t, i18n } = useTranslation();
       
 const login = useAppSelector(selectLogin);
-      
+const theme = useAppSelector(selectTheme);
 const dispatch = useAppDispatch();
 
 return (
