@@ -2,15 +2,15 @@ import './i18n'
 // the hook
 import { useTranslation } from 'react-i18next';
 import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import { Counter } from './features/counter/Counter';
-import { Home } from './features/home/Home';
-import { Top } from './features/top/Top';
-import { LoginFrom } from './features/login/LoginFrom';
-import { ShowFrom } from './features/login/ShowFrom';
-import { useAppSelector, useAppDispatch } from './app/hooks';
+import { Counter } from './component/counter/Counter';
+import { Home } from './component/home/Home';
+import { Top } from './component/top/Top';
+import { LoginFrom } from './component/login/LoginFrom';
+import { ShowFrom } from './component/login/ShowFrom';
+import { useAppSelector, useAppDispatch } from './store/hooks';
 import {
   selectTheme,
-} from './features/theme/themeSlice';
+} from './component/theme/themeSlice';
 
 function App() {
 

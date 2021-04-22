@@ -1,13 +1,13 @@
 import { Alert } from 'react-bootstrap';
 // the hook
 import { useTranslation } from 'react-i18next';
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import {
   selectTheme,
 } from '../theme/themeSlice';
 import {
   selectLogin,
-} from '../login/loginSlice';
+} from './loginSlice';
 import { Form, Button } from 'react-bootstrap';
 
 export function ShowFrom() {

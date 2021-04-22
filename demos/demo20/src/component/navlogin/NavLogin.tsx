@@ -1,7 +1,7 @@
 // the hook
 import { useTranslation } from 'react-i18next';
 import { Navbar, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import {
   selectTheme,
 } from '../theme/themeSlice';
