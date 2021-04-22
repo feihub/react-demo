@@ -17,7 +17,7 @@ export const counterSlice = createSlice({
     changeThemeLight: (state) => {
       state.theme = 'light';
     },
-    changeThemeDark: (state) => {
+    changeThemeInfo: (state) => {
       state.theme = 'info';
     }
   }
