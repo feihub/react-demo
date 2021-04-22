@@ -10,6 +10,7 @@ import {
   selectLogin,
 } from './loginSlice';
 import { Form, Button, Container } from 'react-bootstrap';
+import { useHistory } from "react-router-dom";
 
 export function LoginFrom() {
 
@@ -19,6 +20,8 @@ export function LoginFrom() {
   const theme = useAppSelector(selectTheme);
   const dispatch = useAppDispatch();
 
+  let history = useHistory();
+
   const handleSubmit = (event: any) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -27,6 +30,8 @@ export function LoginFrom() {
     }
 
     dispatch(login());
+
+    history.push("/home");
 
   };
 

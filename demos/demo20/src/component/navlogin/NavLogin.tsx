@@ -10,6 +10,7 @@ import {
   selectLogin,
 } from '../login/loginSlice';
 import { Dropdown, Image, ButtonGroup, Button } from 'react-bootstrap';
+import { useHistory } from "react-router-dom";
 
 export function NavLogin() {
 
@@ -19,9 +20,12 @@ export function NavLogin() {
   const login = useAppSelector(selectLogin);
   const dispatch = useAppDispatch();
 
+  let history = useHistory();
+
   const logoutNow = (eventKey: string | null, e: React.SyntheticEvent<unknown>): void => {
     if (eventKey === '2') {
       dispatch(logout());
+      history.push("/home");
     }
   };
 
@@ -33,7 +37,7 @@ export function NavLogin() {
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
       <Dropdown.Menu onSelect={logoutNow} >
         <Dropdown.Item eventKey="1" href="#/show">{t('User Info')}</Dropdown.Item>
-        <Dropdown.Item eventKey="2" >{t('Logout')}</Dropdown.Item>
+        <Dropdown.Item eventKey="2" href="#/home">{t('Logout')}</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown >;
   }

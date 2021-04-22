@@ -19,7 +19,7 @@ export function Home() {
 
     return (
 
-        <Container fluid>
+        <Container className = 'bg-light'  fluid>
             <Row>
                 <Col xs={2}>
                     <Left />
