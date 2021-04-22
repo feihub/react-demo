@@ -32,27 +32,23 @@ function App() {
     <Router>
       <Navbar bg={theme}>
         <Navbar.Brand href="#/">React-Demo</Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse>
-          <Nav>
-            <Nav.Link href="#/">{t('Home')}</Nav.Link>
-            <Nav.Link href="#/clock">{t('Counter')}</Nav.Link>
-          </Nav>
-            <Navbar.Collapse className="justify-content-center me-5 pe-5">
-              <Nav activeKey={theme === "light" ? "1" : "2"} onSelect={changeTheme}>
+        <Nav>
+            <Nav.Item><Nav.Link href="#/">{t('Home')}</Nav.Link></Nav.Item>
+            <Nav.Item><Nav.Link href="#/clock">{t('Counter')}</Nav.Link></Nav.Item>
+            <Nav.Item className="ms-auto"><Nav activeKey={theme === "light" ? "1" : "2"} onSelect={changeTheme}>
                 <NavDropdown title={t('Theme')} id="basic-nav-dropdown-Theme">
                   <NavDropdown.Item eventKey="1">{t('light')}</NavDropdown.Item>
                   <NavDropdown.Item eventKey="2">{t('Info')}</NavDropdown.Item>
                 </NavDropdown>
-              </Nav>
-              <Nav activeKey={i18n.language === "en" ? "1" : "2"} onSelect={changeLanguage}>
+              </Nav></Nav.Item>
+            <Nav.Item><Nav activeKey={i18n.language === "en" ? "1" : "2"} onSelect={changeLanguage}>
                 <NavDropdown title={t('Language')} id="basic-nav-dropdown-Language">
                   <NavDropdown.Item eventKey="1">English</NavDropdown.Item>
                   <NavDropdown.Item eventKey="2">中文</NavDropdown.Item>
                 </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-        </Navbar.Collapse>
+              </Nav></Nav.Item>
+            <Nav.Item className="me-5"><Nav.Link as button href="#/login">{t('Login')}</Nav.Link></Nav.Item>
+          </Nav>
       </Navbar >
       <Switch>
         <Route exact path="/">
@@ -61,6 +57,9 @@ function App() {
         <Route path="/clock">
           <Counter />
         </Route>
+        <Route path="/login">
+            <Login />
+          </Route>
       </Switch>
     </Router>
   );
