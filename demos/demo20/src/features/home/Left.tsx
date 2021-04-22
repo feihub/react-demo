@@ -12,8 +12,8 @@ const dispatch = useAppDispatch();
 return (
 
 <Nav defaultActiveKey="#/home/item" className="flex-column">
-                <Nav.Link href="#/home/item">Active</Nav.Link>
-                <Nav.Link href="#/home/item2">Link</Nav.Link>
+                <Nav.Link href="#/home/item">{t('Concept')}</Nav.Link>
+                <Nav.Link href="#/home/item2">{t('Example')}</Nav.Link>
             </Nav>
 );
 }
