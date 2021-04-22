@@ -9,14 +9,14 @@ import './App.css';
 //------------------------------------------------------------
 function ListItem(props) {
   // 正確！你不需要在這裡指出 key：
-  return <li>{props.value}</li>;
+  return <li className="row alert alert-info ">{props.value}</li>;
 }
 
 function NumberList(props) {
   const numbers = props.numbers;
   const listItems = numbers.map((number) =>
     // 正確！Key 應該在 array 內被指定。
-    <ListItem key={number.toString()} value={number} />
+    <ListItem key={number.toString()} value={'NumberList------'+number} />
   );
   return (
     <ul>
@@ -33,22 +33,21 @@ function Blog(props) {
   const sidebar = (
     <ul>
       {props.posts.map((post) =>
-        <li key={post.id}>
-          {post.title}
+        <li className="row alert alert-info " key={post.id}>
+          {'Blog---sidebar--title-'+post.title}
         </li>
       )}
     </ul>
   );
   const content = props.posts.map((post) =>
     <div key={post.id}>
-      <h3>{post.title}</h3>
-      <p>{post.content}</p>
+      <h3 className="row alert alert-info ">{'Blog---content--title-'+post.title}</h3>
+      <p className="row alert alert-info ">{'Blog---content--content-'+post.content}</p>
     </div>
   );
   return (
     <div>
       {sidebar}
-      <hr />
       {content}
     </div>
   );
@@ -65,7 +64,7 @@ function NumberList2(props) {
   const numbers = props.numbers;
   const listItems = numbers.map((number) =>
     <ListItem key={number.toString()}
-              value={number} />
+              value={'NumberList2------'+number} />
   );
   return (
     <ul>
@@ -82,7 +81,7 @@ function NumberList3(props) {
     <ul>
       {numbers.map((number) =>
         <ListItem key={number.toString()}
-                  value={number} />
+                  value={'NumberList3------'+number} />
       )}
     </ul>
   );
@@ -97,7 +96,7 @@ function NumberList4(props) {
     <ul>
       {numbers.map((number, index) =>
         <ListItem key={index}
-                  value={number} />
+                  value={'NumberList4------'+number} />
       )}
     </ul>
   );
@@ -107,11 +106,16 @@ function NumberList4(props) {
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
+      <hr />
       <NumberList numbers={numbers} />
+      <hr />
       <NumberList2 numbers={numbers} />
+      <hr />
       <NumberList3 numbers={numbers} />
+      <hr />
       <NumberList4 numbers={numbers} />
+      <hr />
       <Blog posts={posts} />
     </div>
   );

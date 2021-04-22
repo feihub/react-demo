@@ -20,5 +20,5 @@
 | demo16	| React Redux |
 | demo17	| react.i18next |
 | demo18	| axios |
-| demo19	| ant design |
+| demo19	| react-bootstrap |
 | demo20	| 综合项目 |

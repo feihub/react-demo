@@ -69,7 +69,7 @@ function WelcomeDialog2() {
 
 // 组合也同样适用于以 class 形式定义的组件。
 
-function Dialog(props) {
+function Dialog2(props) {
   return (
     <FancyBorder color="blue">
       <h1 className="Dialog-title">
@@ -93,14 +93,14 @@ class SignUpDialog extends React.Component {
 
   render() {
     return (
-      <Dialog title="Mars Exploration Program"
+      <Dialog2 title="Mars Exploration Program"
               message="How should we refer to you?">
         <input value={this.state.login}
                onChange={this.handleChange} />
         <button onClick={this.handleSignUp}>
           Sign Me Up!
         </button>
-      </Dialog>
+      </Dialog2>
     );
   }
 
@@ -114,6 +114,18 @@ class SignUpDialog extends React.Component {
 }
 
 //-------------------------------------------------------------
+
+function Contacts(props) {
+  return (
+    <div>Contacts</div>
+  );
+}
+
+function Chat(props) {
+  return (
+    <div>Chat</div>
+  );
+}
 
 //组件可以接受任意 props，包括基本数据类型，React 元素以及函数。
 
