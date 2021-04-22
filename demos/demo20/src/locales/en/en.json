@@ -15,5 +15,11 @@
     "Name":"Name",
     "Add Amount":"Add Amount",
     "Add Async":"Add Async",
-    "Add If Odd":"Add If Odd"
+    "Add If Odd":"Add If Odd",
+    "Concept":"Concept",
+    "Example":"Example",
+    "Component":"Component",
+    "State":"State",
+    "seState":"seState",
+    "Example1":"Example1"
 }
