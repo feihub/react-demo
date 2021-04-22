@@ -55,20 +55,20 @@ export function Counter() {
           className={styles.button}
           onClick={() => dispatch(incrementByAmount(incrementValue))}
         >
-          Add Amount
+          {t('Add Amount')}
         </button>
         <button
           className={styles.asyncButton}
           //B.3 用dispatch调用redux thunk
           onClick={() => dispatch(incrementAsync(incrementValue))}
         >
-          Add Async
+          {t('Add Async')}
         </button>
         <button
           className={styles.button}
           onClick={() => dispatch(incrementIfOdd(incrementValue))}
         >
-          Add If Odd
+          {t('Add If Odd')}
         </button>
       </div>
     </div>
