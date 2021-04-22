@@ -9,10 +9,22 @@ const { t, i18n } = useTranslation();
 const login = useAppSelector(selectLogin);
 const theme = useAppSelector(selectTheme);
 const dispatch = useAppDispatch();
+      
+        const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+              
+              dispatch(login());
+  };
 
 return (
 
-      <Form>
+      <Form onSubmit={handleSubmit} >
         <Form.Group controlId="formBasicName">
           <Form.Label>Name</Form.Label>
           <Form.Control type="name" placeholder="Enter name" />
