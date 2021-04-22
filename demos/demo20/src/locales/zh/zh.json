@@ -20,6 +20,10 @@
     "Example":"例子",
     "Component":"组件",
     "State":"状态",
-    "seState":"设置状态",
-    "Example1":"用例1"
+    "Lifecycle":"生命周期",
+    "Example1":"用例1",
+    "Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.":"组件允许你将 UI 拆分为独立可复用的代码片段，并对每个片段进行独立构思。",
+    "This page introduces the concept of lifecycle in a React component.":"This page introduces the concept of lifecycle in a React component.",
+    "This page introduces the concept of Props & State in a React component.":"This page introduces the concept of Props & State in a React component.",
+    "This is Example1.":"This is Example1."
 }
