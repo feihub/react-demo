@@ -13,7 +13,7 @@ return (
 
 <main>
 
-            <Alert id='item_1'>
+            <Alert id='item_1' variant='primary'>
                 
                 <h1>{t('Component')}</h1>
                 
@@ -23,7 +23,7 @@ return (
                 
             </Alert>
 
-            <Alert id='item_2'>
+            <Alert id='item_2' variant='secondary'>
                 
                 <h1>{t('Lifecycle')}</h1>
 
@@ -31,7 +31,7 @@ return (
                     {t('This page introduces the concept of lifecycle in a React component.')}
                 </p>
                 
-                <Alert id='item_2_1'>
+                <Alert id='item_2_1' variant='success'>
                     
                     <h2>{t('Props & State')} </h2>
                     
@@ -43,7 +43,7 @@ return (
 
             </Alert>
 
-            <Alert id='item2_1'>
+            <Alert id='item2_1' variant='info'>
                 
                 <h1>{t('Example1')} </h1>
                 
