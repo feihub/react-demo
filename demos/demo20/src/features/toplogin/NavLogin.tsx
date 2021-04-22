@@ -3,7 +3,7 @@ import './i18n'
 import { useTranslation } from 'react-i18next';
 
 
-function TopLogin() {
+function NavLogin() {
 
 
    const { t, i18n } = useTranslation();
