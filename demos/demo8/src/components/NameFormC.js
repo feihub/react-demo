@@ -93,7 +93,7 @@ export default class NameFormC extends React.Component {
                   </option>
                   <option value="grapefruit">葡萄柚</option>
                   <option value="lime">酸橙</option>
-                  <option selected value="coconut">
+                  <option value="coconut">
                     椰子
                   </option>
                   <option value="mango">芒果</option>

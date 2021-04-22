@@ -42,9 +42,9 @@ export default class InfoNotControl extends React.Component {
             </div>
 
             <div className="col-12 col-sm-4 col-lg-4">
-              <div class="form-group">
-                <label for="inputfile">Upload</label>
-                <input type="file" id="inputfile" ref={this.fileInput} />
+              <div className="form-group">
+                <label>Upload</label>
+                <input type="file" ref={this.fileInput} />
               </div>
             </div>
 
