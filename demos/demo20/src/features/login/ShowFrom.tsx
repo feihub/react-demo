@@ -14,10 +14,10 @@ return (
 
      <Form>
         <Form.Group controlId="formBasicName">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="name" placeholder="Name" plaintext readOnly />
+          <Form.Label>{t('Name')}</Form.Label>
+          <Form.Control type="name" plaintext readOnly />
           <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
+                {t('We\'ll never share your email with anyone else')}.
           </Form.Text>
         </Form.Group>
 
