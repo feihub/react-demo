@@ -6,7 +6,9 @@ export function Login() {
 
 const { t, i18n } = useTranslation();
       
-const [login, setLogin] = useState<boolean>(false);
+const login = useAppSelector(selectLogin);
+      
+const dispatch = useAppDispatch();
 
 return (
 
