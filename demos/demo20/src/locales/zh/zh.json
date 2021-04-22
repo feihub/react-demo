@@ -15,5 +15,11 @@
     "Name":"用户名",
     "Add Amount":"增加金额",
     "Add Async":"异步增加",
-    "Add If Odd":"如果奇数增加"
+    "Add If Odd":"如果奇数增加",
+    "Concept":"概念",
+    "Example":"例子",
+    "Component":"组件",
+    "State":"状态",
+    "seState":"设置状态",
+    "Example1":"用例1"
 }
