@@ -25,20 +25,20 @@ return (
 
       <Form onSubmit={handleSubmit} >
         <Form.Group controlId="formBasicName">
-          <Form.Label>Name</Form.Label>
-          <Form.Control type="name" placeholder="Enter name" />
+          <Form.Label>{t('Name')}</Form.Label>
+          <Form.Control type="name" placeholder={t('Enter name')} />
           <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
+            {t('We'll never share your info with anyone else.')}
           </Form.Text>
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>{t('Password')}</Form.Label>
+          <Form.Control type="password" placeholder={t('Password')} />
         </Form.Group>
                   
         <Button variant="primary" type="submit">
-          Submit
+              {t('Submit')}
         </Button>
       </Form>
 );
