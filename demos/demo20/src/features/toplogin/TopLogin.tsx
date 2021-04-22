@@ -25,9 +25,8 @@ function TopLogin() {
                    <Image src="holder.js/171x180" roundedCircle />
                   <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
                   <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                    <Dropdown.Item href="#/show">Action</Dropdown.Item>
+                    <Dropdown.Item href="#/logout">Another action</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
                 
