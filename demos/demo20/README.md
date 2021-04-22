@@ -53,4 +53,4 @@ npm install --save axios
 
 npm install --save react-i18next
 
-npm install --save antd
+npm install --save react-bootstrap bootstrap
