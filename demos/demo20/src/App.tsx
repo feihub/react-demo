@@ -11,6 +11,7 @@ function App() {
 
   const { t, i18n } = useTranslation();
   const [theme, setTheme] = useState<string>('light');
+  const [login, setLogin] = useState<boolean>(false);
 
   const changeTheme = (eventKey: string | null, e: React.SyntheticEvent<unknown>): void => {
     if (eventKey === '1') {
