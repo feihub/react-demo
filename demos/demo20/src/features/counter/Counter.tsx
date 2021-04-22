@@ -20,6 +20,8 @@ export function Counter() {
 
   const incrementValue = Number(incrementAmount) || 0;
   
+    const { t, i18n } = useTranslation();
+  
   const theme = useAppSelector(selectTheme);
   const dispatch = useAppDispatch();
 
