@@ -19,6 +19,9 @@ export function Counter() {
   const [incrementAmount, setIncrementAmount] = useState('2');
 
   const incrementValue = Number(incrementAmount) || 0;
+  
+  const theme = useAppSelector(selectTheme);
+  const dispatch = useAppDispatch();
 
   return (
     <div>
