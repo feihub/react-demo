@@ -31,8 +31,8 @@ function NavLogin() {
                    <Image src="holder.js/171x180" roundedCircle />
                   <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
                   <Dropdown.Menu onSelect={logoutNow} >
-                    <Dropdown.Item eventKey="1" href="#/show">User Info</Dropdown.Item>
-                    <Dropdown.Item eventKey="2" >Logout</Dropdown.Item>
+                    <Dropdown.Item eventKey="1" href="#/show">{t('User Info')}</Dropdown.Item>
+                    <Dropdown.Item eventKey="2" >{t('Logout')}</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
                 
