@@ -15,17 +15,29 @@ return (
 
             <Alert id='item_1'>
                 
-                this is item_1 -----{t('Component')}
+                <h1>{t('Component')}</h1>
+                
+                <p>
+                    {t('Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.')}
+                </p>
                 
             </Alert>
 
             <Alert id='item_2'>
                 
-                this is item_2 -----{t('State')}
+                <h1>{t('Lifecycle')}</h1>
 
+                <p>
+                    {t('This page introduces the concept of lifecycle in a React component.')}
+                </p>
+                
                 <Alert id='item_2_1'>
                     
-                    this is item_2_1 -----{t('seState')} 
+                    <h2>{t('Props & State')} </h2>
+                    
+                        <p>
+                            {t('This page introduces the concept of Props & State in a React component.')}
+                        </p>
                 
                 </Alert>
 
@@ -33,7 +45,11 @@ return (
 
             <Alert id='item2_1'>
                 
-                this is item2_1 -----{t('Example1')} 
+                <h1>{t('Example1')} </h1>
+                
+                        <p>
+                            {t('This is Example1.')}
+                        </p>
                 
             </Alert>
 
