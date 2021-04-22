@@ -11,6 +11,12 @@ function NavLogin() {
  const theme = useAppSelector(selectTheme);
  const login = useAppSelector(selectLogin);
  const dispatch = useAppDispatch();
+   
+     const logoutNow = (eventKey: string | null, e: React.SyntheticEvent<unknown>): void => {
+        if(eventKey === '2'){
+            dispatch(logout());
+        }
+  };
 
   return (
 
@@ -24,9 +30,9 @@ function NavLogin() {
                 <Dropdown as={ButtonGroup}>
                    <Image src="holder.js/171x180" roundedCircle />
                   <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/show">User Info</Dropdown.Item>
-                    <Dropdown.Item href="#/logout">Logout</Dropdown.Item>
+                  <Dropdown.Menu onSelect={logoutNow} >
+                    <Dropdown.Item eventKey="1" href="#/show">User Info</Dropdown.Item>
+                    <Dropdown.Item eventKey="2" >Logout</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
                 
