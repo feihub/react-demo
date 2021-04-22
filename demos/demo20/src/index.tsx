@@ -4,15 +4,12 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-import { Container } from 'react-bootstrap';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* 2.配置redux store给React使用 */}
     <Provider store={store}>
-      <Container >
         <App />
-      </Container>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

@@ -1,11 +1,10 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './i18n'
 // the hook
 import { useTranslation } from 'react-i18next';
 import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import { Counter } from './features/counter/Counter';
 import { Home } from './features/home/home';
-import { Container, Navbar, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
 
 function App() {
@@ -30,16 +29,15 @@ function App() {
   };
 
   return (
-    <Container >
-      <Router>
-        <Navbar bg={theme}>
-          <Navbar.Brand href="#/">React-Demo</Navbar.Brand>
-          <Navbar.Toggle />
-          <Navbar.Collapse>
-            <Nav>
-              <Nav.Link href="#/">{t('Home')}</Nav.Link>
-              <Nav.Link href="#/clock">{t('Counter')}</Nav.Link>
-            </Nav>
+    <Router>
+      <Navbar bg={theme}>
+        <Navbar.Brand href="#/">React-Demo</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse>
+          <Nav>
+            <Nav.Link href="#/">{t('Home')}</Nav.Link>
+            <Nav.Link href="#/clock">{t('Counter')}</Nav.Link>
+          </Nav>
             <Navbar.Collapse className="justify-content-center">
               <Nav activeKey={theme === "light" ? "1" : "2"} onSelect={changeTheme}>
                 <NavDropdown title={t('Theme')} id="basic-nav-dropdown-Theme">
@@ -54,18 +52,17 @@ function App() {
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
-          </Navbar.Collapse>
-        </Navbar >
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/clock">
-            <Counter />
-          </Route>
-        </Switch>
-      </Router>
-    </Container>
+        </Navbar.Collapse>
+      </Navbar >
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/clock">
+          <Counter />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
