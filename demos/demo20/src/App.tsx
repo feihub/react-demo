@@ -38,7 +38,7 @@ function App() {
             <Nav.Link href="#/">{t('Home')}</Nav.Link>
             <Nav.Link href="#/clock">{t('Counter')}</Nav.Link>
           </Nav>
-            <Navbar.Collapse className="justify-content-center">
+            <Navbar.Collapse className="justify-content-center me-5 pe-5">
               <Nav activeKey={theme === "light" ? "1" : "2"} onSelect={changeTheme}>
                 <NavDropdown title={t('Theme')} id="basic-nav-dropdown-Theme">
                   <NavDropdown.Item eventKey="1">{t('light')}</NavDropdown.Item>
