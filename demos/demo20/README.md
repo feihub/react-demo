@@ -56,3 +56,7 @@ npm install --save axios
 npm install --save react-i18next
 
 npm install --save react-bootstrap bootstrap
+
+npm install --save react-icons
+
+
