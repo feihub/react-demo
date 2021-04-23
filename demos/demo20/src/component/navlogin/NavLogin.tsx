@@ -35,9 +35,9 @@ export function NavLogin() {
     return < Dropdown as={ButtonGroup}>
       <Button>Test User</Button>
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
-      <Dropdown.Menu onSelect={logoutNow} >
+      <Dropdown.Menu >
         <Dropdown.Item eventKey="1" href="#/show">{t('User Info')}</Dropdown.Item>
-        <Dropdown.Item eventKey="2" href="#/home">{t('Logout')}</Dropdown.Item>
+        <Dropdown.Item eventKey="2" onSelect={logoutNow} >{t('Logout')}</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown >;
   }
