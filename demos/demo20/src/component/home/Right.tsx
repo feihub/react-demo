@@ -6,7 +6,7 @@ import {
   selectTheme,
 } from '../theme/themeSlice';
 import { Nav, ListGroup, Col } from 'react-bootstrap';
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 export function Right() {
 
