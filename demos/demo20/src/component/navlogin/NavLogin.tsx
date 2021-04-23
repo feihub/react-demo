@@ -10,7 +10,7 @@ import {
   selectLogin,
 } from '../login/loginSlice';
 import { Dropdown, Image, ButtonGroup, Button } from 'react-bootstrap';
-import { useHistory } from "react-router-dom";
+import { useHistory , NavLink } from "react-router-dom";
 
 export function NavLogin() {
 
@@ -36,7 +36,9 @@ export function NavLogin() {
       <Button>Test User</Button>
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
       <Dropdown.Menu >
-        <Dropdown.Item eventKey="1" href="#/show">{t('User Info')}</Dropdown.Item>
+        <Dropdown.Item eventKey="1" >
+          <NavLink to="/show">{t('User Info')}</NavLink>
+        </Dropdown.Item>
         <Dropdown.Item eventKey="2" onSelect={logoutNow} >{t('Logout')}</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown >;
