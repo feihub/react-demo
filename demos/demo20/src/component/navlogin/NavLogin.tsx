@@ -11,7 +11,7 @@ import {
 } from '../login/loginSlice';
 import { Dropdown, Image, ButtonGroup, Button } from 'react-bootstrap';
 import { useHistory , NavLink } from "react-router-dom";
-import { FcManager } from "react-icons/fc";
+import { BsPeopleCircle } from "react-icons/bs";
 
 export function NavLogin() {
 
@@ -38,7 +38,7 @@ export function NavLogin() {
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
       <Dropdown.Menu >
         <Dropdown.Item eventKey="1" >
-          <NavLink to="/show"><FcManager/>{t('User Info')}</NavLink>
+          <NavLink to="/show"><BsPeopleCircle/>{t('User Info')}</NavLink>
         </Dropdown.Item>
         <Dropdown.Item eventKey="2" onSelect={logoutNow} >{t('Logout')}</Dropdown.Item>
       </Dropdown.Menu>
