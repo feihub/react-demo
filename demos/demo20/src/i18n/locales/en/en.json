@@ -25,5 +25,5 @@
     "Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.":"Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.",
     "This page introduces the concept of lifecycle in a React component.":"This page introduces the concept of lifecycle in a React component.",
     "This page introduces the concept of Props & State in a React component.":"This page introduces the concept of Props & State in a React component.",
-    "This is Example1.":"This is Example1."
+    "This is Example 1.":"This is Example 1."
 }
