@@ -1,7 +1,7 @@
 import './i18n'
 // the hook
 import { useTranslation } from 'react-i18next';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import { Counter } from './component/counter/Counter';
 import { Home } from './component/home/Home';
 import { Top } from './component/top/Top';
@@ -20,7 +20,7 @@ function App() {
   const theme = useAppSelector(selectTheme);
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Top />
       <Switch>
         <Route path="/home">
@@ -37,7 +37,7 @@ function App() {
         </Route>
         <Redirect to="/home" />
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
