@@ -2,16 +2,27 @@
 import { useTranslation } from 'react-i18next';
 import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import {
-  changeTheme,
+  changeToTheme1,
+  changeToTheme2,
+  theme1,
+  theme2,
+  primary,
+  secondary,
+  success,
+  warning,
+  danger,
+  info,
+  light,
+  dark,
   selectTheme,
 } from '../theme/themeSlice';
 import {
   selectLogin,
 } from '../login/loginSlice';
-import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown, Row } from 'react-bootstrap';
 import { NavLogin } from '../navlogin/NavLogin';
-import { NavLink } from 'react-router-dom';
-import { IoLogoReact } from "react-icons/io";
+import { Link } from 'react-router-dom';
+import { IoLogoReact } from "react-icons/io5";
 
 
 export function Top() {
@@ -24,9 +35,9 @@ export function Top() {
 
   const changeThemeNow = (eventKey: string | null, e: React.SyntheticEvent<unknown>): void => {
     if (eventKey === '1') {
-      dispatch(changeTheme('light'));
+      dispatch(changeToTheme1());
     } else if (eventKey === '2') {
-      dispatch(changeTheme('dark'));
+      dispatch(changeToTheme2());
     }
   };
 
@@ -41,16 +52,16 @@ export function Top() {
 
   return (
 
-    <Navbar bg={theme} className="pr-5 pl-5">
-      <Navbar.Brand ><IoLogoReact/>React-Demo</Navbar.Brand>
-      <Nav className="flex-grow-1" defaultActiveKey="#/home">
+    <Navbar bg={theme.headTheme} className="pr-5 pl-5">
+      <Navbar.Brand ><Row className="align-items-center"><IoLogoReact />React-Demo</Row></Navbar.Brand>
+      <Nav className="flex-grow-1 align-items-center ml-5">
         <Nav.Item>
-          <NavLink to="/home">{t('Home')}</NavLink>
+          <Nav.Link className="bg-success  "><Link className="text-dark" to="/home">{t('Home')}</Link></Nav.Link>
         </Nav.Item>
-        <Nav.Item>
-          <NavLink to="/counter">{t('Counter')}</NavLink>
+        <Nav.Item className="ml-2">
+          <Nav.Link className="bg-success  "><Link className="text-dark" to="/counter">{t('Counter')}</Link></Nav.Link>
         </Nav.Item>
-        <Nav.Item className="ml-auto"><Nav activeKey={theme === "light" ? "1" : "2"} onSelect={changeThemeNow}>
+        <Nav.Item className="ml-auto"><Nav activeKey={theme.headTheme === info ? "1" : "2"} onSelect={changeThemeNow}>
           <NavDropdown title={t('Theme')} id="basic-nav-dropdown-Theme">
             <NavDropdown.Item eventKey="1">{t('light')}</NavDropdown.Item>
             <NavDropdown.Item eventKey="2">{t('dark')}</NavDropdown.Item>

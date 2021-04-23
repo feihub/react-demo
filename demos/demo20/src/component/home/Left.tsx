@@ -5,7 +5,7 @@ import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import {
     selectTheme,
 } from '../theme/themeSlice';
-import { Nav, Row, Col } from 'react-bootstrap';
+import { Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 export function Left() {
@@ -16,9 +16,11 @@ export function Left() {
     const dispatch = useAppDispatch();
 
     return (
-        <Nav defaultActiveKey="/home/item1" className="flex-column">
-            <NavLink to="/home/item1">{t('Concept')}</NavLink>
-            <NavLink to="/home/item2">{t('Example')}</NavLink>
-        </Nav>
+        <Container fluid>
+            <Nav className="flex-column mt-3">
+                <NavLink className="text-secondary mt-3" to="/home/item1">{t('Concept')}</NavLink>
+                <NavLink className="text-secondary mt-3" to="/home/item2">{t('Example')}</NavLink>
+            </Nav>
+        </Container>
     );
 }
