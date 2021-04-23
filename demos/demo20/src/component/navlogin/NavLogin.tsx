@@ -37,7 +37,7 @@ export function NavLogin() {
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
       <Dropdown.Menu >
         <Dropdown.Item eventKey="1" >
-          <NavLink to="/show"><Image src="https://avatars.githubusercontent.com/u/24521545?s=48&v=4" roundedCircle />{t('User Info')}</NavLink>
+          <NavLink to="/show"><Image src="https://avatars.githubusercontent.com/u/24521545?s=20&v=4" fluid roundedCircle />{t('User Info')}</NavLink>
         </Dropdown.Item>
         <Dropdown.Item eventKey="2" onSelect={logoutNow} >{t('Logout')}</Dropdown.Item>
       </Dropdown.Menu>
