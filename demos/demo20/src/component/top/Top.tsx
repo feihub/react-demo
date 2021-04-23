@@ -23,9 +23,9 @@ export function Top() {
 
   const changeThemeNow = (eventKey: string | null, e: React.SyntheticEvent<unknown>): void => {
     if (eventKey === '1') {
-      dispatch(changeTheme('success'));
+      dispatch(changeTheme('light'));
     } else if (eventKey === '2') {
-      dispatch(changeTheme('info'));
+      dispatch(changeTheme('dark'));
     }
   };
 
@@ -49,10 +49,10 @@ export function Top() {
         <Nav.Item>
           <NavLink to="/counter">{t('Counter')}</NavLink>
         </Nav.Item>
-        <Nav.Item className="ml-auto"><Nav activeKey={theme === "success" ? "1" : "2"} onSelect={changeThemeNow}>
+        <Nav.Item className="ml-auto"><Nav activeKey={theme === "light" ? "1" : "2"} onSelect={changeThemeNow}>
           <NavDropdown title={t('Theme')} id="basic-nav-dropdown-Theme">
-            <NavDropdown.Item eventKey="1">{t('success')}</NavDropdown.Item>
-            <NavDropdown.Item eventKey="2">{t('info')}</NavDropdown.Item>
+            <NavDropdown.Item eventKey="1">{t('light')}</NavDropdown.Item>
+            <NavDropdown.Item eventKey="2">{t('dark')}</NavDropdown.Item>
           </NavDropdown>
         </Nav></Nav.Item>
         <Nav.Item><Nav activeKey={i18n.language === "en" ? "1" : "2"} onSelect={changeLanguage}>
