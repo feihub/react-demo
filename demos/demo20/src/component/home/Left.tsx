@@ -6,6 +6,7 @@ import {
     selectTheme,
 } from '../theme/themeSlice';
 import { Nav, Row, Col } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom'
 
 export function Left() {
 
@@ -15,10 +16,9 @@ export function Left() {
     const dispatch = useAppDispatch();
 
     return (
-
-        <Nav defaultActiveKey="#/home/item" className="flex-column">
-            <Nav.Link href="#/home/item">{t('Concept')}</Nav.Link>
-            <Nav.Link href="#/home/item2">{t('Example')}</Nav.Link>
+        <Nav defaultActiveKey="/home/item" className="flex-column">
+            <NavLink to="/home/item">{t('Concept')}</NavLink>
+            <NavLink to="/home/item2">{t('Example')}</NavLink>
         </Nav>
     );
 }
