@@ -27,11 +27,10 @@ export function LoginFrom() {
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
+    } else {
+      dispatch(login());
+      history.push("/home");
     }
-
-    dispatch(login());
-
-    history.push("/home");
 
   };
 
