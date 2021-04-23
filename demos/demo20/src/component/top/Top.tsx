@@ -56,10 +56,10 @@ export function Top() {
       <Navbar.Brand ><Row className="align-items-center"><IoLogoReact />React-Demo</Row></Navbar.Brand>
       <Nav className="flex-grow-1 align-items-center ml-5">
         <Nav.Item>
-          <Nav.Link className="bg-success  "><Link className="text-dark" to="/home">{t('Home')}</Link></Nav.Link>
+          <Link className="text-dark" to="/home">{t('Home')}</Link>
         </Nav.Item>
         <Nav.Item className="ml-2">
-          <Nav.Link className="bg-success  "><Link className="text-dark" to="/counter">{t('Counter')}</Link></Nav.Link>
+          <Link className="text-dark" to="/counter">{t('Counter')}</Link>
         </Nav.Item>
         <Nav.Item className="ml-auto"><Nav activeKey={theme.headTheme === info ? "1" : "2"} onSelect={changeThemeNow}>
           <NavDropdown title={t('Theme')} id="basic-nav-dropdown-Theme">
