@@ -26,7 +26,7 @@ function App() {
         <Route path="/home">
           <Home />
         </Route>
-        <Route path="/clock">
+        <Route path="/counter">
           <Counter />
         </Route>
         <Route path="/login">
