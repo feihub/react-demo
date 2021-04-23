@@ -19,7 +19,7 @@ export function Home() {
 
     return (
 
-        <Container className = 'bg-light'  fluid>
+        <Container className = {theme === "light" ? "bg-light" : "bg-dark"}  fluid>
             <Row>
                 <Col xs={2}>
                     <Left />
