@@ -23,7 +23,7 @@
     "Lifecycle":"生命周期",
     "Example1":"用例1",
     "Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.":"组件允许你将 UI 拆分为独立可复用的代码片段，并对每个片段进行独立构思。",
-    "This page introduces the concept of lifecycle in a React component.":"This page introduces the concept of lifecycle in a React component.",
-    "This page introduces the concept of Props & State in a React component.":"This page introduces the concept of Props & State in a React component.",
-    "This is Example1.":"This is Example1."
+    "This page introduces the concept of lifecycle in a React component.":"该页面介绍了React组件中生命周期的概念。",
+    "This page introduces the concept of Props & State in a React component.":"该页面介绍了React组件中的参数和状态的概念。",
+    "This is Example 1.":"这是示例1。"
 }
