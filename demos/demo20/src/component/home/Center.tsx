@@ -50,10 +50,10 @@ export function Center() {
 
                 <Alert id='item21' variant='info'>
 
-                    <h1>{t('Example1')} </h1>
+                    <h1>{t('Example 1')} </h1>
 
                     <p>
-                        {t('This is Example1.')}
+                        {t('This is Example 1.')}
                     </p>
 
                 </Alert>
