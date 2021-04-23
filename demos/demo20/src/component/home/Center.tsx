@@ -18,7 +18,7 @@ export function Center() {
         <Container fluid>
             <main>
 
-                <Alert id='item_1' variant='primary' className='mt-3'>
+                <Alert id='item11' variant='primary' className='mt-3'>
 
                     <h1>{t('Component')}</h1>
 
@@ -28,7 +28,7 @@ export function Center() {
 
                 </Alert>
 
-                <Alert id='item_2' variant='secondary'>
+                <Alert id='item12' variant='secondary'>
 
                     <h1>{t('Lifecycle')}</h1>
 
@@ -36,7 +36,7 @@ export function Center() {
                         {t('This page introduces the concept of lifecycle in a React component.')}
                     </p>
 
-                    <Alert id='item_2_1' variant='success'>
+                    <Alert id='item13' variant='success'>
 
                         <h2>{t('Props & State')} </h2>
 
@@ -48,7 +48,7 @@ export function Center() {
 
                 </Alert>
 
-                <Alert id='item2_1' variant='info'>
+                <Alert id='item21' variant='info'>
 
                     <h1>{t('Example1')} </h1>
 
