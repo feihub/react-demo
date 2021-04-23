@@ -11,6 +11,7 @@ import {
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { NavLogin } from '../navlogin/NavLogin';
 import { NavLink } from 'react-router-dom';
+import { FcHome } from "react-icons/fc";
 
 
 export function Top() {
@@ -41,7 +42,7 @@ export function Top() {
   return (
 
     <Navbar bg={theme} className="pr-5 pl-5">
-      <Navbar.Brand >React-Demo</Navbar.Brand>
+      <Navbar.Brand ><FcHome/>React-Demo</Navbar.Brand>
       <Nav className="flex-grow-1" defaultActiveKey="#/home">
         <Nav.Item>
           <NavLink to="/home">{t('Home')}</NavLink>
