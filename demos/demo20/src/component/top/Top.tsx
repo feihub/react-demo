@@ -10,7 +10,7 @@ import {
 } from '../login/loginSlice';
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { NavLogin } from '../navlogin/NavLogin';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 
 export function Top() {
