@@ -11,7 +11,6 @@ import {
 } from '../login/loginSlice';
 import { Dropdown, Image, ButtonGroup, Button } from 'react-bootstrap';
 import { useHistory , NavLink } from "react-router-dom";
-import { FaUser} from "react-icons/fa";
 
 export function NavLogin() {
 
@@ -38,7 +37,7 @@ export function NavLogin() {
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
       <Dropdown.Menu >
         <Dropdown.Item eventKey="1" >
-          <NavLink to="/show"><FaUser/>{t('User Info')}</NavLink>
+          <NavLink to="/show"><Image src="https://avatars.githubusercontent.com/u/24521545?s=48&v=4" roundedCircle />{t('User Info')}</NavLink>
         </Dropdown.Item>
         <Dropdown.Item eventKey="2" onSelect={logoutNow} >{t('Logout')}</Dropdown.Item>
       </Dropdown.Menu>
