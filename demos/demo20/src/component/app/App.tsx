@@ -1,12 +1,12 @@
 // the hook
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
-import { Counter } from './component/counter/Counter';
-import { Home } from './component/home/Home';
-import { Top } from './component/top/Top';
-import { LoginFrom } from './component/login/LoginFrom';
-import { ShowFrom } from './component/login/ShowFrom';
-import { useAppSelector, useAppDispatch } from './store/hooks';
+import { Counter } from './../counter/Counter';
+import { Home } from './../home/Home';
+import { Top } from './../top/Top';
+import { LoginFrom } from './../login/LoginFrom';
+import { ShowFrom } from './../login/ShowFrom';
+import { useAppSelector, useAppDispatch } from './../../store/store';
 import { ListGroup, Nav, ButtonGroup, Button } from 'react-bootstrap';
 import {
   selectTheme,
