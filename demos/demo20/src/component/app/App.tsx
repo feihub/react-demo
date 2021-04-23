@@ -1,4 +1,3 @@
-// the hook
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import { Counter } from './../counter/Counter';
