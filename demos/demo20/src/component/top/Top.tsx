@@ -10,6 +10,7 @@ import {
 } from '../login/loginSlice';
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { NavLogin } from '../navlogin/NavLogin';
+import { NavLink } from 'react-router-dom'
 
 
 export function Top() {
@@ -42,8 +43,12 @@ export function Top() {
     <Navbar bg={theme} className="pr-5 pl-5">
       <Navbar.Brand >React-Demo</Navbar.Brand>
       <Nav className="flex-grow-1" defaultActiveKey="#/home">
-        <Nav.Item><Nav.Link href="#/home">{t('Home')}</Nav.Link></Nav.Item>
-        <Nav.Item><Nav.Link href="#/clock">{t('Counter')}</Nav.Link></Nav.Item>
+        <Nav.Item>
+          <NavLink to="/home">{t('Home')}</NavLink>
+        </Nav.Item>
+        <Nav.Item>
+          <NavLink to="/counter">{t('Counter')}</NavLink>
+        </Nav.Item>
         <Nav.Item className="ml-auto"><Nav activeKey={theme === "success" ? "1" : "2"} onSelect={changeThemeNow}>
           <NavDropdown title={t('Theme')} id="basic-nav-dropdown-Theme">
             <NavDropdown.Item eventKey="1">{t('success')}</NavDropdown.Item>
