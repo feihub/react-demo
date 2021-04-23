@@ -16,8 +16,8 @@ export function Left() {
     const dispatch = useAppDispatch();
 
     return (
-        <Nav defaultActiveKey="/home/item" className="flex-column">
-            <NavLink to="/home/item">{t('Concept')}</NavLink>
+        <Nav defaultActiveKey="/home/item1" className="flex-column">
+            <NavLink to="/home/item1">{t('Concept')}</NavLink>
             <NavLink to="/home/item2">{t('Example')}</NavLink>
         </Nav>
     );
