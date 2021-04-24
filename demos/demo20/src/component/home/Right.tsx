@@ -8,6 +8,8 @@ import {
 import { Nav, ListGroup, Col } from 'react-bootstrap';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import "./Home.css";
+import { Right2 } from './Right2';
+import { Right3 } from './Right3';
 
 export function Right() {
 
@@ -21,20 +23,10 @@ export function Right() {
       <Container fluid>
         <Switch>
           <Route path="/home/item1">
-            <ListGroup >
-              <ListGroup.Item className='border-0 py-0 bg-none'><Nav.Link className="text-secondary" href="#item11">{t('Component')}</Nav.Link></ListGroup.Item>
-              <ListGroup.Item className='border-0 py-0'>
-                <Nav.Link className="text-secondary" href="#item12">{t('Lifecycle')}</Nav.Link>
-                <ListGroup >
-                  <ListGroup.Item className='border-0 py-0'><Nav.Link className="text-secondary" href="#item13">{t('State')}</Nav.Link></ListGroup.Item>
-                </ListGroup>
-              </ListGroup.Item>
-            </ListGroup>
+            <Right2 />
           </Route>
           <Route path="/home/item2">
-            <ListGroup>
-              <ListGroup.Item className='border-0 py-0'><Nav.Link className="text-secondary" href="#item21">{t('Example 1')}</Nav.Link></ListGroup.Item>
-            </ListGroup>
+            <Right3 />
           </Route>
           <Redirect to="/home/item1" />
         </Switch>
