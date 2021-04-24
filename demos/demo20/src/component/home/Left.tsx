@@ -22,8 +22,8 @@ export function Left() {
         <Container fluid>
             <Card className="home-align-items border-0 home-left">
                 <Nav className="border-radius-home flex-column " >
-                    <Nav.Link className="text-secondary m-2" href="/home/item1#item11">{t('Concept')}</Nav.Link>
-                    <Nav.Link className="text-secondary m-2" href="/home/item2#item21">{t('Example')}</Nav.Link>
+                    <NavLink className="text-secondary m-2" to="/home/item1" exact>{t('Concept')}</NavLink>
+                    <NavLink className="text-secondary m-2" to="/home/item2">{t('Example')}</NavLink>
                 </Nav>
             </Card>
         </Container>
