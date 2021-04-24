@@ -8,7 +8,7 @@ import {
 import {
   selectLogin,
 } from './loginSlice';
-import { Form, Container, Row } from 'react-bootstrap';
+import { Form, Container, Row, Image } from 'react-bootstrap';
 
 export function ShowFrom() {
 
@@ -20,11 +20,16 @@ export function ShowFrom() {
 
   return (
     <Container fluid>
+
+      <Row className="justify-content-center p-3">
+        <Image src="https://avatars.githubusercontent.com/u/24521545?s=200&v=4" fluid roundedCircle width='200px' height='200px' />
+      </Row>
+
       <Row className="justify-content-center">
-        <Form className="mt-5">
+        <Form>
           <Form.Group controlId="formBasicName">
             <Form.Label>{t('Name')}</Form.Label>
-            <Form.Control type="name" readOnly value='Test User' />
+            <Form.Control type="name" readOnly value='Panda' />
             <Form.Text className="text-muted">
               {t('We\'ll never share your email with anyone else')}.
           </Form.Text>

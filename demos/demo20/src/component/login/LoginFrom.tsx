@@ -9,7 +9,7 @@ import {
   login,
   selectLogin,
 } from './loginSlice';
-import { Form, Button, Container } from 'react-bootstrap';
+import { Form, Button, Container, Image } from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
 
 export function LoginFrom() {
@@ -36,8 +36,13 @@ export function LoginFrom() {
 
   return (
     <Container fluid>
+
+      <Row className="justify-content-center p-3">
+        <Image src="https://avatars.githubusercontent.com/u/24521545?s=200&v=4" fluid roundedCircle width='200px' height='200px' />
+      </Row>
+
       <Row className="justify-content-center">
-        <Form onSubmit={handleSubmit} className="mt-5">
+        <Form onSubmit={handleSubmit} className='align-items-cente' >
           <Form.Group controlId="formBasicName">
             <Form.Label>{t('Name')}</Form.Label>
             <Form.Control type="name" placeholder={t('Enter name')} />
@@ -45,15 +50,14 @@ export function LoginFrom() {
               {t('We\'ll never share your info with anyone else.')}
             </Form.Text>
           </Form.Group>
-
           <Form.Group controlId="formBasicPassword">
             <Form.Label>{t('Password')}</Form.Label>
             <Form.Control type="password" placeholder={t('Password')} />
           </Form.Group>
-
-          <Button variant="primary" type="submit">
-            {t('Submit')}
-          </Button>
+          <Row className="justify-content-center">
+            <Button variant="primary" type="submit">
+              {t('Submit')}
+            </Button></Row>
         </Form>
       </Row>
     </Container>

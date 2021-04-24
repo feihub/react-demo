@@ -30,7 +30,7 @@ export function NavLogin() {
     return <NavLink to="/login"><Button className="bg-success">{t('Login')}</Button></NavLink>;
   } else {
     return < Dropdown as={ButtonGroup}>
-      <Button><Image src="https://avatars.githubusercontent.com/u/24521545?s=20&v=4" fluid roundedCircle />  Test User</Button>
+      <Button><Image src="https://avatars.githubusercontent.com/u/24521545?s=20&v=4" fluid roundedCircle />  Panda </Button>
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
       <Dropdown.Menu >
         <Dropdown.Item onSelect={show}>
