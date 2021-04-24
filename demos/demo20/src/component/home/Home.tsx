@@ -7,7 +7,7 @@ export function Home() {
 
     return (
 
-        <Container fluid>
+        <Container className='pt-3' fluid>
             <Row>
                 <Col xs={2}>
                     <Left />

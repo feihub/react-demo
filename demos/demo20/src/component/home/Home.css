@@ -1,0 +1,25 @@
+.home-align-items {
+    align-items: center;
+}
+
+.home-left {
+    position:fixed;
+}
+
+.home-right {
+    position:fixed;
+}
+
+.home-right-items {
+    align-items: start;
+}
+
+.home-center {
+    position:fixed;
+    height:100%;
+    overflow-y:scroll;
+}
+
+.home-center::-webkit-scrollbar {
+    display: none;
+}

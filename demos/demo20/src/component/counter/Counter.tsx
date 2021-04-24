@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next';
 import {
   selectTheme,
 } from '../theme/themeSlice';
+import { Alert } from 'react-bootstrap';
 
 export function Counter() {
   //7.useAppSelector从store读取数据
@@ -29,51 +30,55 @@ export function Counter() {
   const theme = useAppSelector(selectTheme);
 
   return (
-    <div>
-      <div className={styles.row}>
-        <button
-          className={styles.button}
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          -
+    <div className='p-5'>
+      <Alert variant='info' className='p-5'>
+        <div>
+          <div className={styles.row}>
+            <button
+              className={styles.button}
+              aria-label="Decrement value"
+              onClick={() => dispatch(decrement())}
+            >
+              -
         </button>
-        <span className={styles.value}>{count}</span>
-        <button
-          className={styles.button}
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          +
+            <span className={styles.value}>{count}</span>
+            <button
+              className={styles.button}
+              aria-label="Increment value"
+              onClick={() => dispatch(increment())}
+            >
+              +
         </button>
-      </div>
-      <div className={styles.row}>
-        <input
-          className={styles.textbox}
-          aria-label="Set increment amount"
-          value={incrementAmount}
-          onChange={(e) => setIncrementAmount(e.target.value)}
-        />
-        <button
-          className={styles.button}
-          onClick={() => dispatch(incrementByAmount(incrementValue))}
-        >
-          {t('Add Amount')}
-        </button>
-        <button
-          className={styles.asyncButton}
-          //B.3 用dispatch调用redux thunk
-          onClick={() => dispatch(incrementAsync(incrementValue))}
-        >
-          {t('Add Async')}
-        </button>
-        <button
-          className={styles.button}
-          onClick={() => dispatch(incrementIfOdd(incrementValue))}
-        >
-          {t('Add If Odd')}
-        </button>
-      </div>
+          </div>
+          <div className={styles.row}>
+            <input
+              className={styles.textbox}
+              aria-label="Set increment amount"
+              value={incrementAmount}
+              onChange={(e) => setIncrementAmount(e.target.value)}
+            />
+            <button
+              className={styles.button}
+              onClick={() => dispatch(incrementByAmount(incrementValue))}
+            >
+              {t('Add Amount')}
+            </button>
+            <button
+              className={styles.asyncButton}
+              //B.3 用dispatch调用redux thunk
+              onClick={() => dispatch(incrementAsync(incrementValue))}
+            >
+              {t('Add Async')}
+            </button>
+            <button
+              className={styles.button}
+              onClick={() => dispatch(incrementIfOdd(incrementValue))}
+            >
+              {t('Add If Odd')}
+            </button>
+          </div>
+        </div>
+      </Alert>
     </div>
   );
 }

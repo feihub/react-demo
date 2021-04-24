@@ -18,6 +18,7 @@ import {
   dark,
   selectTheme,
 } from '../theme/themeSlice';
+import './App.css'
 
 function App() {
 
@@ -26,26 +27,28 @@ function App() {
   const theme = useAppSelector(selectTheme);
 
   return (
-    <BrowserRouter>
-      <Top />
-      <Container className={theme.headTheme === info ? "bg-light" : "bg-dark"} fluid>
-        <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/counter">
-            <Counter />
-          </Route>
-          <Route path="/login">
-            <LoginFrom />
-          </Route>
-          <Route path="/show">
-            <ShowFrom />
-          </Route>
-          <Redirect to="/home" />
-        </Switch>
-      </Container>
-    </BrowserRouter>
+
+      <BrowserRouter>
+        <Top />
+        <Container className={theme.headTheme === info ? "bg-light app-container" : "bg-dark app-container"} fluid>
+          <Switch>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/counter">
+              <Counter />
+            </Route>
+            <Route path="/login">
+              <LoginFrom />
+            </Route>
+            <Route path="/show">
+              <ShowFrom />
+            </Route>
+            <Redirect to="/home" />
+          </Switch>
+        </Container>
+      </BrowserRouter>
+
   );
 }
 

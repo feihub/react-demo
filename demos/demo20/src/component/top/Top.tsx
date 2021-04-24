@@ -23,7 +23,8 @@ import { Container, Navbar, Nav, NavDropdown, Row } from 'react-bootstrap';
 import { NavLogin } from '../navlogin/NavLogin';
 import { Link } from 'react-router-dom';
 import { IoLogoReact } from "react-icons/io5";
-
+import "./Top.css";
+import { findDOMNode } from 'react-dom' 
 
 export function Top() {
 
@@ -52,13 +53,13 @@ export function Top() {
 
   return (
 
-    <Navbar bg={theme.headTheme} className="pr-5 pl-5">
-      <Navbar.Brand ><Row className="align-items-center"><IoLogoReact />React-Demo</Row></Navbar.Brand>
+    <Navbar bg={theme.headTheme} className="pr-5 pl-5 sticky-top">
+      <Navbar.Brand ><Row className="bg-log align-items-center ml-3"><IoLogoReact />React-Demo</Row></Navbar.Brand>
       <Nav className="flex-grow-1 align-items-center ml-5">
         <Nav.Item>
           <Link className="text-dark" to="/home">{t('Home')}</Link>
         </Nav.Item>
-        <Nav.Item className="ml-2">
+        <Nav.Item className="ml-5">
           <Link className="text-dark" to="/counter">{t('Counter')}</Link>
         </Nav.Item>
         <Nav.Item className="ml-auto"><Nav activeKey={theme.headTheme === info ? "1" : "2"} onSelect={changeThemeNow}>
@@ -73,7 +74,7 @@ export function Top() {
             <NavDropdown.Item eventKey="2">中文</NavDropdown.Item>
           </NavDropdown>
         </Nav></Nav.Item>
-        <Nav.Item className="mr-5"><NavLogin /></Nav.Item>
+        <Nav.Item className="mr-3"><NavLogin /></Nav.Item>
       </Nav>
     </Navbar >
 
