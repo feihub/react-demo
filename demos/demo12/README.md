@@ -1,3 +1,7 @@
+npx create-react-app demo12 --template redux
+
+npm install --save redux-devtools-extension
+
 ## react-devtools
 
 chrome debug
@@ -19,3 +23,4 @@ npm install --save redux-devtools-extension
 chrome debug
 
 https://github.com/reduxjs/redux-devtools
+
