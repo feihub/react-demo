@@ -59,4 +59,5 @@ npm install --save react-bootstrap bootstrap
 
 npm install --save react-icons
 
+npm install --save redux-devtools-extension
 
