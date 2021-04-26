@@ -17,6 +17,7 @@
 .home-center {
     position:fixed;
     height:100%;
+    width: 58%;
     overflow-y:scroll;
 }
 
