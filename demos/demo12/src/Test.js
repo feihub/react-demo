@@ -4,13 +4,13 @@ class Test extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { infor: 'test' };
+        this.state = { info: 'test' };
     }
 
     render() {
         return (
-            <div>{this.state.infor}</div>
-            <div>{this.props.infor}</div>
+            <div>{this.state.info}</div>
+            <div>{this.props.info}</div>
         );
     }
 
