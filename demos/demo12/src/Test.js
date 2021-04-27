@@ -9,8 +9,10 @@ class Test extends React.Component {
 
     render() {
         return (
-            <div>{this.state.info}</div>
-            <div>{this.props.info}</div>
+            <>
+                <div>{this.state.info}</div>
+                <div>{this.props.info}</div>
+            </>
         );
     }
 
