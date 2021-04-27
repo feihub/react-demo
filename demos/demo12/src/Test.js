@@ -10,6 +10,7 @@ class Test extends React.Component {
     render() {
         return (
             <div>{this.state.infor}</div>
+            <div>{this.props.infor}</div>
         );
     }
 
