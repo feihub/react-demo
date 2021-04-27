@@ -6,7 +6,7 @@ import Test from './Test';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-dark">
       <div><Test info = 'test_props'/></div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
