@@ -4,7 +4,7 @@ class Test extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { info: 'test' };
+        this.state = { info: 'test_state' };
     }
 
     render() {
