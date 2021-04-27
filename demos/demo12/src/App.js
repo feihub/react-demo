@@ -7,7 +7,7 @@ import Test from './Test';
 function App() {
   return (
     <div className="App">
-      <div><Test /></div>
+      <div><Test info = 'testproper'/></div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
