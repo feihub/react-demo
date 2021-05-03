@@ -28,10 +28,10 @@ function App() {
 
         Jest是一个JavaScriput测试运行器。它允许jsdom操作DOM。<br/>
 
-        React测试库是一组能让你不依赖React 组件具体实现对他们进行测试的辅助工具。<br/>
+        React测试库是一组能让你不依赖React 组件具体实现对他们进行测试的辅助工具。<br/></p>
+        
 
-        React 组件的常见测试模式：<br/></p>
-
+        <h2 className="bg-info">React 组件的常见测试模式：</h2>
         <ul>
           <li>创建/清理</li>
           <li>act()</li>
@@ -43,6 +43,9 @@ function App() {
           <li>快照测试</li>
           <li>多渲染器</li>
         </ul>
+
+        <h3 className="bg-info">测试组件</h3>
+
         <Test/><br/>
         <Test2/><br/>
         <Test3/><br/>

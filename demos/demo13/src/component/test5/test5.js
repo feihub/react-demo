@@ -11,7 +11,7 @@ export default function Test5(props) {
   }, [props.onSelect]);
 
   return (<div>{[1, 2, 3, 4].map(choice => (
-    <button
+    <button className="btn-info"
       key={choice}
       data-testid={choice}
       onClick={() => props.onSelect(choice)}
