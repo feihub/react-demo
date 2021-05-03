@@ -3,7 +3,6 @@ import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import Test from "./test";
 
-
 //创建/清理
 let container = null;
 beforeEach(() => {

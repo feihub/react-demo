@@ -25,8 +25,8 @@ it("应渲染问候语", () => {
   });
 
   expect(pretty(container.innerHTML)).toMatchInlineSnapshot(
-    `"<span>嘿，陌生人6</span>"`
-  );
+    `"<div><span>嘿，陌生人6</span></div>"`
+  ); /* ... 由 jest 自动填充 ... */
 
   act(() => {
     render(<Test6 name="Jenny" />, container);
@@ -34,7 +34,7 @@ it("应渲染问候语", () => {
 
   expect(pretty(container.innerHTML)).toMatchInlineSnapshot(
     `"<h1>你好，Jenny！6</h1>"`
-  );
+  ); /* ... 由 jest 自动填充 ... */
 
   act(() => {
     render(<Test6 name="Margaret" />, container);
@@ -42,5 +42,5 @@ it("应渲染问候语", () => {
 
   expect(pretty(container.innerHTML)).toMatchInlineSnapshot(
     `"<h1>你好，Margaret！6</h1>"`
-  );
+  ); /* ... 由 jest 自动填充 ... */
 });
