@@ -5,6 +5,7 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const element = screen.getByText('测试react组件的方法分两类：');
+  expect(element).toBeInTheDocument();
 });
+

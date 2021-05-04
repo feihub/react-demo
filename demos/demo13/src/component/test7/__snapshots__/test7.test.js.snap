@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div>
+  你好！7
+</div>
+`;
+
+exports[`test7 1`] = `
+<div>
+  你好！7
+</div>
+`;
