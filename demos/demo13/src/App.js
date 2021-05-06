@@ -33,15 +33,15 @@ function App() {
 
         <h2 className="bg-info">React 组件的常见测试模式：</h2>
         <ul>
-          <li>创建/清理</li>
-          <li>act()</li>
-          <li>渲染</li>
-          <li>数据获取</li>
-          <li>mock 模块</li>
-          <li>事件</li>
-          <li>计时器</li>
-          <li>快照测试</li>
-          <li>多渲染器</li>
+          <li>创建/清理Test</li>
+          <li>act()Test</li>
+          <li>渲染Test</li>
+          <li>数据获取Test2</li>
+          <li>mock 模块Test3</li>
+          <li>事件Test4</li>
+          <li>计时器Test5</li>
+          <li>快照测试Test6</li>
+          <li>多渲染器Test7</li>
         </ul>
 
         <h3 className="bg-info">测试组件</h3>
