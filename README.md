@@ -18,7 +18,7 @@
 | demo14	| React 哲学 |
 | demo15	| React Router |
 | demo16	| React Redux |
-| demo17	| react.i18next |
-| demo18	| axios |
-| demo19	| react-bootstrap |
+| demo17	| React.i18next |
+| demo18	| Axios |
+| demo19	| React-Bootstrap |
 | demo20	| 综合项目 |
