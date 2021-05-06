@@ -2,12 +2,10 @@ import React from 'react';
 import Grandfather from './features/test/Grandfather';
 import './App.css';
 
-function Redux() {
+function ReduxComponent() {
   return (
-    <div className="App">
-      <Grandfather />
-    </div>
+     <Grandfather />
   );
 }
 
-export default App;
+export default ReduxComponent;
