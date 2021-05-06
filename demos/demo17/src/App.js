@@ -4,9 +4,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <HookApp/>
-      <HOCApp/>
-      <TransComponentApp/>
+      <HookI18n/>
+      <HOCI18n/>
+      <TransComponentI18n/>
     </div>
   );
 }
