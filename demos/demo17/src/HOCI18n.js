@@ -6,9 +6,8 @@ import { withTranslation } from 'react-i18next';
 class LegacyComponentClass extends Component {
   render() {
     const { t } = this.props;
-
     return (
-      <h1>{t('Welcome to React')}</h1>
+      <h1>{t('Language')}</h1>
     )
   }
 }

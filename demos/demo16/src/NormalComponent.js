@@ -1,4 +1,7 @@
-class NormalComponent extends React.Component {
+import React from 'react';
+import {Button} from 'react-bootstrap';
+
+export default class NormalComponent extends React.Component {
   render() {
     return <Toolbar theme="dark" />;
   }
@@ -17,6 +20,6 @@ function Toolbar(props) {
 
 class ThemedButton extends React.Component {
   render() {
-    return <Button theme={this.props.theme} />;
+    return <Button variant={this.props.theme}> theme </Button>;
   }
 }
