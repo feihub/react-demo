@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import logo from './logo.svg';
 import './App.css';
 
+//Using the useTranslation hook
+
 function App() {
 
   const { t, i18n } = useTranslation();
