@@ -16,7 +16,7 @@ const MyComponent = withTranslation()(LegacyComponentClass)
 
 // i18n translations might still be loaded by the http backend
 // use react's Suspense
-export default function App2() {
+export default function HOCApp() {
   return (
     <Suspense fallback="loading">
       <MyComponent />
