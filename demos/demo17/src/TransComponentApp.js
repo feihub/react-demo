@@ -3,7 +3,7 @@ import { Trans } from 'react-i18next';
 
 //Using the Trans component
 
-export default function MyComponent () {
+export default function TransComponentApp () {
   return <Trans>Welcome to <strong>React</strong></Trans>
 }
 
