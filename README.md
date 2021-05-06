@@ -14,7 +14,7 @@
 | demo10	| 组合 vs 继承 |
 | demo11	| Hook |
 | demo12	| React Debug |
-| demo13	| react 测试 |
+| demo13	| React 测试 |
 | demo14	| React 哲学 |
 | demo15	| React Router |
 | demo16	| React Redux |
