@@ -1,4 +1,4 @@
-class TestApp extends React.Component {
+class App extends React.Component {
   render() {
     return <Toolbar theme="dark" />;
   }
