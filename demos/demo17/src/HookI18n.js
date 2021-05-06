@@ -5,7 +5,7 @@ import './App.css';
 
 //Using the useTranslation hook
 
-function HookApp() {
+function HookI18n() {
 
   const { t, i18n } = useTranslation();
 
@@ -24,4 +24,4 @@ function HookApp() {
   );
 }
 
-export default HookApp;
+export default HookI18n;
