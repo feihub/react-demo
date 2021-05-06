@@ -1,6 +1,8 @@
 import React from 'react';
 import { Trans } from 'react-i18next';
 
+//Using the Trans component
+
 export default function MyComponent () {
   return <Trans>Welcome to <strong>React</strong></Trans>
 }
