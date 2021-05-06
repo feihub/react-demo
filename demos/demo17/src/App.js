@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <HookApp/>
       <HOCApp/>
-      <App/>
+      <TransComponentApp/>
     </div>
   );
 }
