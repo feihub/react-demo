@@ -1,3 +1,4 @@
 {
-    "Language":"Language"
+    "Language":"Language",
+    "userMessagesUnread":"Hello <1>{{name}}</1>, you have {{count}} unread message.<5>test</5>"
 }
