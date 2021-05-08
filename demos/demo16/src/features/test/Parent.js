@@ -21,7 +21,7 @@ function Parent() {
     const dispatch = useDispatch();
 
     return (
-        <div>
+        <div className='bg-light p-5'>
             <h1>This is Parent</h1>
             <div>testValue3：<input value={testValue3.testValue3} onChange={(e)=>{dispatch(changTestValue3(e))}} /></div>
 

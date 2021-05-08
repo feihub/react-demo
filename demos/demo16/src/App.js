@@ -6,10 +6,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className="text-center">
-     <NormalComponent />
-     <ContextComponent />
-     <ReduxComponent />
+    <div className="container text-center">
+      <div className="row mt-5">
+        <div className="col"><NormalComponent /></div>
+        <div className="col"><ContextComponent /></div>
+      </div>
+      <div className="row mt-3"><ReduxComponent /></div>
     </div>
   );
 }

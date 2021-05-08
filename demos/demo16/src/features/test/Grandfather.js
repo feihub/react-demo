@@ -20,7 +20,7 @@ function Grandfather() {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className='bg-info p-5'>
       <h1>This is Grandfather</h1>
 
       {

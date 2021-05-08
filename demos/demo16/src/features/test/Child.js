@@ -19,7 +19,7 @@ function Child() {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className='bg-success p-5'>
       <h1>This is Child</h1>
       <div>testValue：<input value={testValue} onChange={(e)=>{dispatch(changTestValue(e))}} /></div>
     </div>
