@@ -20,5 +20,5 @@
 | demo16	| React Redux |
 | demo17	| React.i18next |
 | demo18	| Axios |
-| demo19	| React-Bootstrap |
+| demo19	| 高级指引/API Reference/FAQ |
 | demo20	| 综合项目 |
