@@ -34,7 +34,31 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">Demo2</header>
+      <header className="App-header">
+
+        <h1>Demo2</h1>
+
+        <h4>
+          React 团队主要推荐这些解决方案：
+      </h4>
+
+        <ul>
+          <li>如果你是在学习 React 或创建一个新的单页应用，请使用 Create React App。</li>
+          <li>如果你是在用 Node.js 构建服务端渲染的网站，试试 Next.js。</li>
+          <li>如果你是在构建内容主导的静态网站，试试 Gatsby。</li>
+          <li>如果你是在打造组件库或将 React 集成到现有代码仓库，尝试更灵活的工具链。</li>
+        </ul>
+
+        <h5>从头开始打造工具链</h5>
+        <p>一组 JavaScript 构建工具链通常由这些组成：</p>
+
+        <ul>
+          <li>一个 package 管理器，比如 Yarn 或 npm。它能让你充分利用庞大的第三方 package 的生态系统，并且轻松地安装或更新它们。</li>
+          <li>一个打包器，比如 webpack 或 Parcel。它能让你编写模块化代码，并将它们组合在一起成为小的 package，以优化加载时间。</li>
+          <li>一个编译器，例如 Babel。它能让你编写的新版本 JavaScript 代码，在旧版浏览器中依然能够工作。</li>
+        </ul>
+
+      </header>
 
       <section className="App-sec">
         {ele1}
