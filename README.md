@@ -12,7 +12,7 @@
 | demo8	| 表单 |
 | demo9	| 状态提升 |
 | demo10	| 组合 vs 继承 |
-| demo11	| Hook |
+| demo11	| Hook/react-use |
 | demo12	| React Debug |
 | demo13	| React 测试 |
 | demo14	| React 哲学 |
