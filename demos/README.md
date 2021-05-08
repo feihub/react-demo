@@ -13,10 +13,10 @@
 | demo9	| 状态提升 |
 | demo10	| 组合 vs 继承 |
 | demo14	| React 哲学 |
-| demo19	| 高级指引/API Reference/FAQ |
+| demo19	| 高级指引/API Reference |
 | demo11	| Hook/react-use |
+| demo13	| React 测试/FAQ |
 | demo12	| React Debug |
-| demo13	| React 测试 |
 | demo15	| React Router |
 | demo16	| React Redux |
 | demo17	| React.i18next |
