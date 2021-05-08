@@ -23,14 +23,17 @@ class App extends React.Component {
     //----------------------------------------------------------------------------------------
     //Axios 实例，创建一个实例
     const instance = axios.create({
-      baseURL: 'https://some-domain.com/api/',
+      baseURL: 'http://localhost:8080',
       timeout: 1000,
-      headers: { 'X-Custom-Header': 'foobar' }
+      headers: {
+        'X-Custom-Header': 'foobar',
+      }
     });
 
     // Add a request interceptor
     const myInterceptor = instance.interceptors.request.use(function (config) {
       // Do something before request is sent
+      console.log("--------interceptors.request------1-----");
       return config;
     }, function (error) {
       // Do something with request error
@@ -41,6 +44,7 @@ class App extends React.Component {
     const myInterceptor2 = instance.interceptors.response.use(function (response) {
       // Any status code that lie within the range of 2xx cause this function to trigger
       // Do something with response data
+      console.log("--------interceptors.response-----2------");
       return response;
     }, function (error) {
       // Any status codes that falls outside the range of 2xx cause this function to trigger
@@ -48,11 +52,11 @@ class App extends React.Component {
       return Promise.reject(error);
     });
 
-    instance.interceptors.request.eject(myInterceptor);
-    instance.interceptors.request.eject(myInterceptor2);
+    //instance.interceptors.request.eject(myInterceptor);
+    //instance.interceptors.request.eject(myInterceptor2);
 
-    instance.get('/user/12345')
-      .then((response)=> {
+    instance.get('/get?name=instance-get')
+      .then((response) => {
         console.log(response.data);
         console.log(response.status);
         console.log(response.statusText);
@@ -61,9 +65,9 @@ class App extends React.Component {
         this.changeState(response.data);
       });
 
-    instance.post('/user/12345', {
-      name: 'new name'
-    }).then((response)=> {
+    instance.post('/post', {
+      name: 'instance-post'
+    }).then((response) => {
       console.log(response.data);
       console.log(response.status);
       console.log(response.statusText);
@@ -76,10 +80,9 @@ class App extends React.Component {
     //GET/POST请求，创建一个新实例。错误处理
     const instance5 = axios({
       method: 'get',
-      url: 'http://bit.ly/2mTM3nY',
-      responseType: 'stream'
+      url: 'http://localhost:8080/get?name=instance5-get'
     })
-      .then((response)=> {
+      .then((response) => {
         console.log(response.data);
         console.log(response.status);
         console.log(response.statusText);
@@ -87,7 +90,7 @@ class App extends React.Component {
         console.log(response.config);
         this.changeState(response.data);
       })
-      .catch((error) =>{
+      .catch((error) => {
         if (error.response) {
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx
@@ -111,12 +114,11 @@ class App extends React.Component {
 
     const instance4 = axios({
       method: 'post',
-      url: '/user/12345',
+      url: 'http://localhost:8080/post',
       data: {
-        firstName: 'Fred',
-        lastName: 'Flintstone'
+        name: 'instance4',
       }
-    }).then((response) =>{
+    }).then((response) => {
       this.changeState(response.data);
     });
 
@@ -127,12 +129,12 @@ class App extends React.Component {
     const source = CancelToken.source();
 
     const instance2 = axios.create({
-      baseURL: 'https://some-domain.com/api/',
+      baseURL: 'http://localhost:8080',
       timeout: 1000,
-      headers: {'X-Custom-Header': 'foobar'}
+      headers: { 'X-Custom-Header': 'foobar' }
     });
 
-    instance2.get('/user/12345', {
+    instance2.get('/get?name=instance2-get', {
       cancelToken: source.token
     }).catch(function (thrown) {
       if (axios.isCancel(thrown)) {
@@ -142,34 +144,33 @@ class App extends React.Component {
       }
     });
 
-    instance2.post('/user/12345', {
-      name: 'new name'
+    instance2.post('/post', {
+      name: 'instance2-post'
     }, {
       cancelToken: source.token
     })
 
     // 取消请求（message 参数是可选的）
-    source.cancel('Operation canceled by the user.');
+    //source.cancel('Operation canceled by the user.');
 
-    //----------------------------------------------------------------------------
+    // //----------------------------------------------------------------------------
 
     const instance3 = axios.create({
-      baseURL: 'https://some-domain.com/api/',
+      baseURL: 'http://localhost:8080',
       timeout: 1000,
       headers: { 'X-Custom-Header': 'foobar' }
     });
 
     //请求体编码,默认情况下，axios将 JavaScript 对象序列化为 JSON 。 要以application/x-www-form-urlencoded格式发送数据，您可以使用以下选项之一。
-    const data = { 'bar': 123 };
+    const data = { 'name': "instance3-post" };
     const options = {
       method: 'POST',
       headers: { 'content-type': 'application/x-www-form-urlencoded' },
       data: qs.stringify(data),
-      url: '/user/12345'
+      url: '/post2'
     };
 
-    instance3.get(options);
-
+    instance3(options);
 
   }
 
