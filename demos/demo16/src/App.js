@@ -2,6 +2,7 @@ import React from 'react';
 import NormalComponent from './NormalComponent';
 import ContextComponent from './ContextComponent';
 import ReduxComponent from './ReduxComponent';
+import ContextHookComponent from './ContextHookComponent';
 import './App.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <div className="row mt-5">
         <div className="col"><NormalComponent /></div>
         <div className="col"><ContextComponent /></div>
+        <div className="col"><ContextHookComponent /></div>
       </div>
       <div className="row mt-3"><ReduxComponent /></div>
     </div>
