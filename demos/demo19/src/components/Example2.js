@@ -3,22 +3,13 @@ import React from 'react';
 class ErrorBoundary extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { error: null, errorInfo: null };
+        this.state = { hasError: false };
     }
 
     static getDerivedStateFromError(error) {
+        console.log(error);
         // 更新 state 使下一次渲染能够显示降级后的 UI
         return { hasError: true };
-    }
-
-    componentDidCatch(error, errorInfo) {
-        // Catch errors in any components below and re-render with error message
-        this.setState({
-            error: error,
-            errorInfo: errorInfo
-        })
-        // You can also log error messages to an error reporting service here
-        //console.log(errorInfo);
     }
 
     render() {
@@ -32,7 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 
 function ErrorTest() {
-    //throw new Error('I crashed!');
+    throw new Error('I crashed!');
     return <h1>NoError</h1>
 }
 
