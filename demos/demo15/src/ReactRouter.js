@@ -14,7 +14,7 @@ class ReactRouter extends React.Component {
         <div>
           <App />
           <Switch>
-            <Route path="/home" component={Home} exact></Route>
+            <Route exact path="/home" component={Home} exact></Route>
             <Route path="/friend" component={Friend}></Route>
             <Route path="/my" component={Myinfo} exact></Route>
             <Route
