@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-function ExampleCount2n() {
+function Example2() {
   const [count, setCount] = useState(0);
   const [date, setDate] = useState(new Date());
   const [width, setWidth] = useState(new Date());
@@ -58,4 +58,4 @@ function ExampleCount2n() {
  * 3）传入一个数组，其中包括变量，只有这些变量变动时，useEffect 才会执行
  * 更新 state 变量总是替换它而不是合并它
  */
-export default ExampleCount2n;
+export default Example2;
