@@ -1,3 +1,5 @@
+import React, { useReducer } from "react";
+
 const initialCount = 0;
 
 function init(initialCount) {
@@ -33,5 +35,5 @@ function Counter({ initialCount }) {
 }
 
 export default function Example4(){
-    return <Counter/>;
+    return <Counter initialCount='0'/>;
 }
