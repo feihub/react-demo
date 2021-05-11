@@ -33,17 +33,3 @@ Router
 StaticRouter
 
 Switch
-
-//--------------------------
-
-generatePath
-
-history
-
-location
-
-match
-
-matchPath
-
-withRouter
