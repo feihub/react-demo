@@ -29,10 +29,10 @@ function Error() {
     return <h1>NoError</h1>
 }
 
-const Example2n = () => {
+const Example2 = () => {
     return <ErrorBoundary>
         <Error />
     </ErrorBoundary>;
 }
 
-export default Example2n;
+export default Example2;
