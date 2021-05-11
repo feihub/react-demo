@@ -1,12 +1,12 @@
 // import logo from './logo.svg';
 import "./App.css";
 import Title from "./components/Title";
-import ExampleCount from "./components/ExampleCount";
-import ExampleCount2n from "./components/ExampleCount2n";
-import ExampleCount3n from "./components/ExampleCount3n";
-import ExampleCount4n from "./components/ExampleCount4n";
-import ExampleCount5n from "./components/ExampleCount5n";
-import ExampleCount6n from "./components/ExampleCount6n";
+import Example from "./components/Example";
+import Example2 from "./components/Example2";
+import Example3 from "./components/Example3";
+import Example4 from "./components/Example4";
+import Example5 from "./components/Example5";
+import Example6 from "./components/Example6";
 import ExampleColor from "./components/ExampleColor";
 import ExampleChangeBg from "./components/ExampleChangeBg";
 
@@ -17,11 +17,11 @@ return (
     <div className="container">
         <div className="row">
             <Title titleText="简单的计数器：使用了useState Hook" />
-            <ExampleCount />
+            <Example />
         </div>
         <div className="row">
             <Title titleText="简单的计数器：使用了useReducer Hook" />
-            <ExampleCount4n />
+            <Example4 />
         </div>
         <div className="row">
             <hr>
@@ -29,7 +29,7 @@ return (
         </div>
         <div className="row">
             <Title titleText="简单的计数器：使用了useEffect & useLayoutEffect Hook" />
-            <ExampleCount2n />
+            <Example2 />
         </div>
         <div className="row">
             <hr>
@@ -37,23 +37,23 @@ return (
         </div>
         <div className="row">
             <Title titleText="简单的计数器：使用了useCallback & useMemo Hook" />
-            <ExampleCount3n />
+            <Example3 />
         </div>
         <div className="row">
             <hr>
             </hr>
         </div>
         <div className="row">
-            <Title titleText="简单的计数器：使用了useContext & useImperativeHandle Hook" />
+            <Title titleText="useContext & useImperativeHandle Hook" />
             <ExampleColor />
         </div>
         <div className="row">
-            <Title titleText="简单的计数器：使用了useRef Hook" />
-            <ExampleCount5n />
+            <Title titleText="useRef Hook" />
+            <Example5 />
         </div>
         <div className="row">
-            <Title titleText="简单的计数器：使用了useDebugValue Hook" />
-            <ExampleCount6n />
+            <Title titleText="useDebugValue Hook" />
+            <Example6 />
         </div>
         <div className="row">
             <hr>
