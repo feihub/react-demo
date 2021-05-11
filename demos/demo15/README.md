@@ -30,6 +30,6 @@ Route
 
 Router
 
-StaticRouter
+StaticRouter//地址栏地址不变
 
 Switch
