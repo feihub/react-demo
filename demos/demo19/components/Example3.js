@@ -8,8 +8,8 @@ const FancyButton = React.forwardRef((props, ref) => (
   const ref = React.createRef();
   <FancyButton ref={ref}>Click me!</FancyButton>;
 
-const Example3n = () => {
+const Example3 = () => {
     return <FancyButton/>;
 }
 
-export default Example3n;
+export default Example3;
