@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch , Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect, useHistory, useLocation, useParams, Prompt, useRouteMatch } from "react-router-dom";
 import Home from "./components/Home";
 // import App from "./App";
 import Myinfo from "./components/Myinfo";
@@ -7,39 +7,56 @@ import Friend from "./components/Friend";
 import Messages from "./components/Messages";
 import App from "./App";
 
-const ReactRouter = ()=> {
-  let history = useHistory();
-  let location = useLocation();
-  let { count } = useParams();
+function ReactRouter() {
   return (
-      <BrowserRouter>
-        <div>
-          <App />
-          <Switch>
-            <Route exact path="/home" component={Home} exact></Route>
-            <Route path="/friend" component={Friend}></Route>
-            <Route path="/my" component={Myinfo} exact></Route>
-            <Route
-              path="/message/:id/:count"
-              component={Messages}
-              exact
-            ></Route>
-            <Route path="/prompt"><Prompt message="Are you sure you want to leave?" /></Route>
-            <BlogPost/>
-            <Redirect to="/home" />
-          </Switch>
-          <div> history:{history}</div>
-          <div> location:{location}</div>
-          <div> count:{count}</div>
-        </div>
-      </BrowserRouter>
-    );
+    <Router>
+      <div>
+        <App />
+        <Switch>
+          <Route exact path="/home" component={Home} exact></Route>
+          <Route path="/friend" component={Friend}></Route>
+          <Route path="/my" component={Myinfo} exact></Route>
+          <Route
+            path="/message/:id/:count"
+            component={Messages}
+            exact
+          ></Route>
+          <Route path="/prompt"><Prompt message="Are you sure you want to leave?" /></Route>
+          <Route path="/home/:slug">
+            <BlogPost2 />
+          </Route>
+          <BlogPost />
+          <Redirect to="/home" />
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 function BlogPost() {
-  let match = useRouteMatch("/home2");
+  let match = useRouteMatch("/home2/:slug");
+  let history = useHistory();
+  let location = useLocation();
   // Do whatever you want with the match...
-  return <div>This is BlogPost</div>;
+
+  if (match) {
+    return <div className="container"><div className="row">
+      <div>This is BlogPost</div>
+      <div> history:{history.location.pathname}</div>
+      <div> location:{location.pathname}</div>
+    </div></div>
+  }
+
+  return <div />;
+}
+
+function BlogPost2() {
+  let { slug } = useParams();
+  // Do whatever you want with the match...
+  return <div className="container"><div className="row">
+    <div>This is BlogPost2</div>
+    <div> slug:{slug}</div>
+  </div></div>;
 }
 
 /**
