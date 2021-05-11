@@ -22,6 +22,7 @@ class ReactRouter extends React.Component {
               component={Messages}
               exact
             ></Route>
+            <Route path="/prompt"><Prompt message="Are you sure you want to leave?" /></Route>
             <Redirect to="/home" />
           </Switch>
         </div>
