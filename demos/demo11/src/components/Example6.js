@@ -11,8 +11,8 @@ function useFriendStatus(friendID) {
     return isOnline;
   }
 
-const ExampleCount6n = () => {
+const Example6 = () => {
     return <useFriendStatus/>;
 }
 
-export default ExampleCount6n;
+export default Example6;
