@@ -32,6 +32,6 @@ function Counter({ initialCount }) {
     );
 }
 
-export default function ExampleCount4n(){
+export default function Example4(){
     return <Counter/>;
 }
