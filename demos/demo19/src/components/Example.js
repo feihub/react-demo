@@ -1,3 +1,6 @@
+import React from 'react';
+import { Button } from 'react-bootstrap';
+
 
 // Context 可以让我们无须明确地传遍每一个组件，就能将值深入传递进组件树。
 // 为当前的 theme 创建一个 context（“light”为默认值）。
@@ -30,7 +33,7 @@ class ThemedButton extends React.Component {
   // 在这个例子中，当前的 theme 值为 “dark”。
   static contextType = ThemeContext;
   render() {
-    return <Button theme={this.context} />;
+    return <Button variant={this.context}> This is Button </Button>;
   }
 }
 

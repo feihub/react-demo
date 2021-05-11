@@ -1,7 +1,9 @@
+import React from 'react';
+
 class ErrorBoundary extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { hasError: false };
+        this.state = { error: null, errorInfo: null };
     }
 
     static getDerivedStateFromError(error) {
@@ -10,8 +12,13 @@ class ErrorBoundary extends React.Component {
     }
 
     componentDidCatch(error, errorInfo) {
-        // 你同样可以将错误日志上报给服务器
-        logErrorToMyService(error, errorInfo);
+        // Catch errors in any components below and re-render with error message
+        this.setState({
+            error: error,
+            errorInfo: errorInfo
+        })
+        // You can also log error messages to an error reporting service here
+        //console.log(errorInfo);
     }
 
     render() {
@@ -24,14 +31,14 @@ class ErrorBoundary extends React.Component {
     }
 }
 
-function Error() {
-    var i = 1 / 0;
+function ErrorTest() {
+    //throw new Error('I crashed!');
     return <h1>NoError</h1>
 }
 
 const Example2 = () => {
     return <ErrorBoundary>
-        <Error />
+        <ErrorTest />
     </ErrorBoundary>;
 }
 
