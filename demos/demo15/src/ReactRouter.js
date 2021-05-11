@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch , Redirect } from "react-router-dom";
 import Home from "./components/Home";
 // import App from "./App";
 import Myinfo from "./components/Myinfo";
@@ -22,6 +22,7 @@ class ReactRouter extends React.Component {
               component={Messages}
               exact
             ></Route>
+            <Redirect to="/home" />
           </Switch>
         </div>
       </BrowserRouter>
