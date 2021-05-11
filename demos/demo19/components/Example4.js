@@ -39,8 +39,8 @@ function Glossary(props) {
   );
 }
 
-const Example4n = () => {
+const Example4 = () => {
     return <Table/>;
 }
 
-export default Example4n;
+export default Example4;
