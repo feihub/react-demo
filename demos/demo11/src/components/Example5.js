@@ -12,8 +12,8 @@ function TextInputWithFocusButton() {
     );
 }
 
-const ExampleCount5n = () => {
+const Example5 = () => {
     return <TextInputWithFocusButton/>;
 }
 
-export default ExampleCount5n;
+export default Example5;
