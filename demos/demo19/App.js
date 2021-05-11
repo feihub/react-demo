@@ -1,6 +1,3 @@
-像 Flow 和 TypeScript 等这些静态类型检查器，可以在运行前识别某些类型的问题。他们还可以通过增加自动补全等功能来改善开发者的工作流程。
-
-
 import "./App.css";
 import Title from "./components/Title";
 import Example from "./components/Example";
