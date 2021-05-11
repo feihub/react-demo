@@ -1,13 +1,13 @@
 import "./App.css";
 import Title from "./components/Title";
 import Example from "./components/Example";
-import Example2n from "./components/Example2n";
-import Example3n from "./components/Example3n";
-import Example4n from "./components/Example4n";
-import Example5n from "./components/Example5n";
-import Example6n from "./components/Example6n";
-import Example7n from "./components/Example7n";
-import Example8n from "./components/Example8n";
+import Example2 from "./components/Example2";
+import Example3 from "./components/Example3";
+import Example4 from "./components/Example4";
+import Example5 from "./components/Example5";
+import Example6 from "./components/Example6";
+import Example7 from "./components/Example7";
+import Example8 from "./components/Example8";
 
 function App() {
 return (
@@ -20,7 +20,7 @@ return (
         </div>
         <div className="row">
             <Title titleText="错误边界" />
-            <Example2n />
+            <Example2 />
         </div>
         <div className="row">
             <hr>
@@ -28,7 +28,7 @@ return (
         </div>
         <div className="row">
             <Title titleText="Refs 转发" />
-            <Example3n />
+            <Example3 />
         </div>
         <div className="row">
             <hr>
@@ -36,7 +36,7 @@ return (
         </div>
         <div className="row">
             <Title titleText="Fragments" />
-            <Example4n />
+            <Example4 />
         </div>
         <div className="row">
             <hr>
@@ -44,11 +44,11 @@ return (
         </div>
         <div className="row">
             <Title titleText="Refs & DOM" />
-            <Example5n />
+            <Example5 />
         </div>
         <div className="row">
             <Title titleText="静态类型检查" />
-            <Example6n />
+            <Example6 />
         </div>
         <div className="row">
             <hr>
@@ -56,11 +56,11 @@ return (
         </div>
         <div className="row">
             <Title titleText="严格模式" />
-            <Example7n />
+            <Example7 />
         </div>
         <div className="row">
             <Title titleText="API Reference" />
-            <Example8n />
+            <Example8 />
         </div>
     </div>
 </div>
