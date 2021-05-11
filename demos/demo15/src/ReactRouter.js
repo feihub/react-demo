@@ -7,9 +7,11 @@ import Friend from "./components/Friend";
 import Messages from "./components/Messages";
 import App from "./App";
 
-class ReactRouter extends React.Component {
-  render() {
-    return (
+const ReactRouter = ()=> {
+  let history = useHistory();
+  let location = useLocation();
+  let { count } = useParams();
+  return (
       <BrowserRouter>
         <div>
           <App />
@@ -23,13 +25,23 @@ class ReactRouter extends React.Component {
               exact
             ></Route>
             <Route path="/prompt"><Prompt message="Are you sure you want to leave?" /></Route>
+            <BlogPost/>
             <Redirect to="/home" />
           </Switch>
+          <div> history:{history}</div>
+          <div> location:{location}</div>
+          <div> count:{count}</div>
         </div>
       </BrowserRouter>
     );
-  }
 }
+
+function BlogPost() {
+  let match = useRouteMatch("/home2");
+  // Do whatever you want with the match...
+  return <div>This is BlogPost</div>;
+}
+
 /**
  * NavLink - 1)activeClassName（string）：设置选中样式，默认值为 active；
  * NavLink - 2)activeStyle（object）：当元素被选中时, 为此元素添加样式；
