@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
-function ExampleCount3n() {
+function Example3() {
   const [count, setCount] = useState(0);
   const [date, setDate] = useState(new Date());
   useEffect(() => {
@@ -53,4 +53,4 @@ function ExampleCount3n() {
  * 这种优化有助于避免在每次渲染时都进行高开销的计算。
  * 记住，传入 useMemo 的函数会在渲染期间执行。请不要在这个函数内部执行与渲染无关的操作
  */
-export default ExampleCount3n;
+export default Example3;
