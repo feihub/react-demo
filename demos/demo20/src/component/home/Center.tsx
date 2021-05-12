@@ -11,8 +11,8 @@ import axiosInstance from "./axiosInstance";
 export function Center() {
 
     const { t, i18n } = useTranslation();
-    const { info, setInfo } = useState('backInfo');
-    const { info2, setInfo2 } = useState('backInfo2');
+    const { info, setInfo } = useState('--loading--1--');
+    const { info2, setInfo2 } = useState('--loading--2--');
 
     const theme = useAppSelector(selectTheme);
     const dispatch = useAppDispatch();
