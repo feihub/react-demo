@@ -1,3 +1,5 @@
+import axios from "axios";
+
 //Axios 实例，创建一个实例
 const axiosInstance = axios.create({
     baseURL: 'http://localhost:8080',

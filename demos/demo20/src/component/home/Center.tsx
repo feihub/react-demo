@@ -6,12 +6,16 @@ import {
 } from '../theme/themeSlice';
 import React, { useState, useEffect } from 'react';
 import axiosInstance from "./axiosInstance";
+import img1 from '../../assets/img1.png';
+import img2 from '../../assets/img2.png';
+import img3 from '../../assets/img3.png';
+import img4 from '../../assets/img4.png';
 
 export function Center() {
 
     const { t, i18n } = useTranslation();
-    const { info, setInfo } = useState('--loading--1--');
-    const { info2, setInfo2 } = useState('--loading--2--');
+    const [ info, setInfo ] = useState<string>('--loading--1--');
+    const [ info2, setInfo2 ] = useState<string>('--loading--2--');
 
     const theme = useAppSelector(selectTheme);
     const dispatch = useAppDispatch();
@@ -42,45 +46,43 @@ export function Center() {
 
             <Alert id='item11' variant='primary'>
 
-                <h1>{t('Component')}</h1>
+                <h4>{t('Component')}</h4>
 
                 <p>
                     {t('Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.')}
                 </p>
 
-                <br></br>
-                <div>info：{info}</div>
-                <br></br>
-                <div>info2：{info2}</div>
-                <br></br>
+                <div className="home-img-center"><img width="500px" src={img1} alt='img1' /></div>
 
-                <div><img width="600px" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180105%2F449e3d089bd74811983feb0c0ff5161c.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623381541&t=6bbdde35a1e35d6167a3d90f0e2fe883' alt='img1' /></div>
+                <br/>
+                <div>info：{info}</div>
+                <br/>
+                <div>info2：{info2}</div>
+                <br/>
 
             </Alert>
 
             <Alert id='item12' variant='secondary'>
 
-                <h1>{t('Lifecycle')}</h1>
+                <h4>{t('Lifecycle')}</h4>
 
                 <p>
                     {t('This page introduces the concept of lifecycle in a React component.')}
                 </p>
 
-                <br>
+                <br/>
                 
-                <div><img width="600px" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fyouimg1.c-ctrip.com%2Ftarget%2F100b0x000000l4117FB55.jpg&refer=http%3A%2F%2Fyouimg1.c-ctrip.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623381884&t=642f48606ad2637cd6de7e07ba78f564' alt='img2' /></div>
-                    
-                </br>
+                <div className="home-img-center"><img width="600px" src={img2} alt='img2' /></div>
 
                 <Alert id='item13' variant='success'>
 
-                    <h2>{t('Props & State')} </h2>
+                    <h4>{t('Props & State')} </h4>
 
                     <p>
                         {t('This page introduces the concept of Props & State in a React component.')}
                     </p>
                     
-                    <div><img width="600px" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181227%2Fd4baeee662c242b6bc387ff58038fe2e.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623380557&t=9704dc56144fadde09fc11754b5513ba' alt='img3' /></div>
+                    <div className="home-img-center"><img width="600px" src={img3} alt='img3' /></div>
 
                 </Alert>
 
@@ -88,13 +90,17 @@ export function Center() {
 
             <Alert id='item21' variant='info'>
 
-                <h1>{t('Example 1')} </h1>
+                <h4>{t('Example 1')} </h4>
 
                 <p>
                     {t('This is Example 1.')}
                 </p>
 
-                <div><img width="600px" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0429%252F8a3e03e6j00qsac830015c000hs00buc.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623382251&t=907ef790b8ed1d0a98b08f2513136e8e' alt='img4' /></div>
+                <div className="home-img-center"><img width="600px" src={img4} alt='img4' /></div>
+
+                <br/>
+                <br/>
+                <br/>
 
             </Alert>
 

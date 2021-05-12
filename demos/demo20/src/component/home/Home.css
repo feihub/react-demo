@@ -24,3 +24,7 @@
 .home-center::-webkit-scrollbar {
     display: none;
 }
+
+.home-img-center{
+    text-align:center
+}
