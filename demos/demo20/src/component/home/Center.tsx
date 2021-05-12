@@ -5,6 +5,7 @@ import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import {
     selectTheme,
 } from '../theme/themeSlice';
+import axios from "axios";
 
 export function Center() {
 
@@ -12,6 +13,24 @@ export function Center() {
 
     const theme = useAppSelector(selectTheme);
     const dispatch = useAppDispatch();
+    
+    //Axios 实例，创建一个实例
+    const instance = axios.create({
+      baseURL: 'http://localhost:8080',
+      timeout: 1000,
+    });
+    
+    instance.get('/get?name=instance-get')
+      .then((response) => {
+        console.log(response.status);
+        this.changeState(response.data);
+      });
+
+    instance.post('/post', {
+      name: 'instance-post'
+    }).then((response) => {
+      console.log(response.status);
+    });
 
     return (
         <div className="home-center">
