@@ -54,7 +54,7 @@ export function Center() {
                 <div>info2：{info2}</div>
                 <br></br>
 
-                <img src='' alt='img'/>
+                <div><img width="600px" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180105%2F449e3d089bd74811983feb0c0ff5161c.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623381541&t=6bbdde35a1e35d6167a3d90f0e2fe883' alt='img1' /></div>
 
             </Alert>
 
@@ -66,7 +66,11 @@ export function Center() {
                     {t('This page introduces the concept of lifecycle in a React component.')}
                 </p>
 
-                <br></br>
+                <br>
+                
+                <div><img width="600px" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fyouimg1.c-ctrip.com%2Ftarget%2F100b0x000000l4117FB55.jpg&refer=http%3A%2F%2Fyouimg1.c-ctrip.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623381884&t=642f48606ad2637cd6de7e07ba78f564' alt='img2' /></div>
+                    
+                </br>
 
                 <Alert id='item13' variant='success'>
 
@@ -75,10 +79,10 @@ export function Center() {
                     <p>
                         {t('This page introduces the concept of Props & State in a React component.')}
                     </p>
+                    
+                    <div><img width="600px" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181227%2Fd4baeee662c242b6bc387ff58038fe2e.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623380557&t=9704dc56144fadde09fc11754b5513ba' alt='img3' /></div>
 
                 </Alert>
-
-                <img src='' alt='img2'/>
 
             </Alert>
 
@@ -90,7 +94,7 @@ export function Center() {
                     {t('This is Example 1.')}
                 </p>
 
-                <img src='' alt='img3'/>
+                <div><img width="600px" src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0429%252F8a3e03e6j00qsac830015c000hs00buc.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1623382251&t=907ef790b8ed1d0a98b08f2513136e8e' alt='img4' /></div>
 
             </Alert>
 
