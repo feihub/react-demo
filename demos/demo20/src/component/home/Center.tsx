@@ -5,31 +5,37 @@ import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import {
     selectTheme,
 } from '../theme/themeSlice';
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import axiosInstance from "./axiosInstance";
 
 export function Center() {
 
     const { t, i18n } = useTranslation();
+    const { info, setInfo } = useState('backInfo');
+    const { info2, setInfo2 } = useState('backInfo2');
 
     const theme = useAppSelector(selectTheme);
     const dispatch = useAppDispatch();
-    
-    //Axios 实例，创建一个实例
-    const instance = axios.create({
-      baseURL: 'http://localhost:8080',
-      timeout: 1000,
-    });
-    
-    instance.get('/get?name=instance-get')
-      .then((response) => {
-        console.log(response.status);
-        this.changeState(response.data);
-      });
 
-    instance.post('/post', {
-      name: 'instance-post'
-    }).then((response) => {
-      console.log(response.status);
+    useEffect(() => {
+        axiosInstance.get('/get?name=instance-get')
+            .then((response) => {
+                console.log(response.status);
+                setInfo(response.data);
+            }).catch((error) => {
+                console.log(error.message);
+                setInfo(error.message);
+            });
+
+        axiosInstance.post('/post', {
+            name: 'instance-post'
+        }).then((response) => {
+            console.log(response.status);
+            setInfo2(response.data);
+        }).catch((error) => {
+            console.log(error.message);
+            setInfo2(error.message);
+        });
     });
 
     return (
@@ -44,7 +50,9 @@ export function Center() {
                 </p>
 
                 <br></br>
+                {info}
                 <br></br>
+                {info2}
                 <br></br>
                 <br></br>
                 <br></br>
