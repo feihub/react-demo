@@ -8,7 +8,7 @@ npm install --save react-router-dom
 
 npm install --save axios
 
-npm install --save react-i18next
+npm install --save react-i18next i18next
 
 npm install --save react-bootstrap bootstrap
 
